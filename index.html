@@ -55,7 +55,7 @@ body {
   <a onClick="show()">test</a>
 </div>
 
-<div class="main">
+<div id="myDIV" class="main">
   <h2>Auto Sidebar</h2>
   <p>This sidebar is as tall as its content (the links), and is always shown.</p>
   <p>Scroll down the page to see the result.</p>
@@ -65,6 +65,16 @@ body {
   <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
 </div>
 
+<script>
+function show() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html> 
