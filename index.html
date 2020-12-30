@@ -52,7 +52,7 @@ body {
   <a href="#sfxmuseum">sfx museum</a>
   <a href="#music">music</a>
   <a href="#luthiery">luthiery</a>
-  <a>test</a>
+  <a onclick="myFunction()">Try it</a>
 </div>
 
 <div class="main">
@@ -65,5 +65,16 @@ body {
   <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
 </div>  
 
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+  
 </body>
 </html> 
