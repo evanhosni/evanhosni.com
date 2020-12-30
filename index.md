@@ -1,6 +1,6 @@
-[dotcomma]
+**[dotcomma]**
 
-[archived]
+**[archived]**
 
 ### Markdown
 
