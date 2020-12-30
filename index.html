@@ -46,22 +46,35 @@ body {
 .main {
   margin-left: 400px;
   margin-right: 50px;
-  margin-top: 150px;
-  font-size: 28px;
+  margin-top: 120px;
+  font-size: 25px;
   padding: 0px 10px;
 }
 
 @media screen and (max-height: 500px) {
   .sidenav {padding-top: 0px;}
   .fixedbottom {position: relative;}
+  .main {margin-top: 80px;}
+}
+
+@media screen and (max-width: 800px) {
+  .sidenav a {font-size: 25px;}
+  .fixedbottom a {font-size: 15px;}
+  .main {margin-left: 300px}
+  .main {font-size: 20px;}
 }
 
 @media screen and (max-height: 400px) {
-  .sidenav {padding-top: 0px;}
   .sidenav a {font-size: 20px;}
-  .fixedbottom {position: relative;}
   .fixedbottom a {font-size: 10px;}
+  .main {font-size: 15px;}
 }
+
+@media screen and (max-width: 600px) {
+  .main {margin-left: 250px}
+  .main {font-size: 15px;}
+}
+
 </style>
 </head>
 <body>
