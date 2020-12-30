@@ -5,17 +5,24 @@
 <style>
 body {
   font-family: courier;
+  display: flex;
 }
 
 .sidenav {
   width: 320px;
   position: fixed;
   z-index: 1;
-  top: 50px;
+  top: 15px;
   left: 50px;
-  background: #ffffff;
   overflow-x: hidden;
-  padding: 8px 0;
+  padding-top: 50px;
+  padding: 15px 0;
+}
+
+.fixedbottom {
+	position: fixed;
+	bottom: 0px;
+	padding-bottom: 50px;
 }
 
 .sidenav a {
@@ -32,17 +39,28 @@ body {
   color: #ffc300;
 }
 
+.fixedbottom a {
+	font-size: 20px;
+}
+
 .main {
-  margin-left: 400px; /* Same width as the sidebar + left position in px */
+  margin-left: 400px;
   margin-right: 50px;
   margin-top: 150px;
-  font-size: 28px; /* Increased text to enable scrolling */
+  font-size: 28px;
   padding: 0px 10px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+@media screen and (max-height: 500px) {
+  .sidenav {padding-top: 0px;}
+  .fixedbottom {position: relative;}
+}
+
+@media screen and (max-height: 400px) {
+  .sidenav {padding-top: 0px;}
+  .sidenav a {font-size: 20px;}
+  .fixedbottom {position: relative;}
+  .fixedbottom a {font-size: 10px;}
 }
 </style>
 </head>
@@ -54,56 +72,62 @@ body {
   <a onClick="show('sfxmuseum')">sfx museum</a>
   <a onClick="show('music')">music</a>
   <a onClick="show('luthiery')">luthiery</a>
+  <div class="fixedbottom">
+	<a href="mailto:evankhaledhosni@gmail.com">email</a>
+	<a href="https://www.linkedin.com/in/evanhosni/">linkedin</a>
+	<a href="https://soundcloud.com/evanhosni">soundcloud</a>
+	<a href="https://evan-cat.herokuapp.com/">itch</a>
+	<a>download resume pdf</a>
+  </div>
 </div>
 
 <div id="evanhosni" class="main">
   <h2>evanhosni</h2>
-  <p>This sidebar is as tall as its content (the links), and is always shown.</p>
-  <p>Scroll down the page to see the result.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>born part frog, part man.</p>
+  <p>don't make me say it.</p>
+  <p>alright fuck it, ima say it. pierce is a bitty and kyle is a swashbuckler.</p>
 </div>
   
 <div id="dotcomma" class="main" style="display:none">
   <h2>dotcomma</h2>
-  <p>This sidebar is as tall as its content (the links), and is always shown.</p>
-  <p>Scroll down the page to see the result.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>is under construction.</p>
+  <p>An interactive music video game.</p>
+  <p>pierce is an absolute bitty.</p>
 </div>
 
 <div id="sfxmuseum" class="main" style="display:none">
   <h2>sfxmuseum</h2>
   <p>This sidebar is as tall as its content (the links), and is always shown.</p>
   <p>Scroll down the page to see the result.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong
+  bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong
+  bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing
+  bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing
+  bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong
+  bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing 
+  bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong .</p>
 </div>
 
 <div id="music" class="main" style="display:none">
   <h2>music</h2>
   <p>This sidebar is as tall as its content (the links), and is always shown.</p>
   <p>Scroll down the page to see the result.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera 
+  fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera 
+  fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera 
+  fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera 
+  fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
 </div>
 
 <div id="luthiery" class="main" style="display:none">
   <h2>luthiery</h2>
   <p>This sidebar is as tall as its content (the links), and is always shown.</p>
   <p>Scroll down the page to see the result.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera 
+  fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
 </div>
 
 <script>
