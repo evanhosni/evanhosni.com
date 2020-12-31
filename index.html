@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>evan hosni</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="simple-game.css">
 <style>
 body {
   font-family: courier;
-  display: flex;
+  display: inline;
 }
 
 .sidenav {
   width: 320px;
   position: fixed;
   z-index: 1;
-  top: 15px;
-  left: 50px;
+  top: 2%;
+  left: 2%;
   overflow-x: hidden;
   padding-top: 50px;
   padding: 15px 0;
@@ -43,42 +45,67 @@ body {
 	font-size: 20px;
 }
 
-.main {
-  margin-left: 400px;
-  margin-right: 50px;
-  margin-top: 120px;
-  font-size: 25px;
-  padding: 0px 10px;
+.simplegame {
 }
 
+.main {
+  line-height: 0.25;
+  font-size: 25px;
+}
+
+.evanhosni {
+  margin-top: 300px;
+  color: #ffffff;
+  line-height: 0.25;
+  background: #000000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 300px;
+}
+
+.dotcomma {
+    margin-left: 375px;
+    margin-right: 50px;
+    margin-top: 350px;
+    font-size: 25px;
+	color: #000000;
+	line-height: 0.25;
+}
+
+
 @media screen and (max-height: 500px) {
-  .sidenav {padding-top: 0px;}
   .fixedbottom {position: relative;}
-  .main {margin-top: 80px;}
+  .evanhosni {margin-top: 75px;}
 }
 
 @media screen and (max-width: 800px) {
-  .main {margin-left: 300px}
-  .main {margin-right: 20px}
+  .dotcomma {margin-left: 320px}
+  .dotcomma {margin-right: 25px}
   .main {font-size: 20px;}
+  .evanhosni {padding-left: 250px;}
 }
 
 @media screen and (max-width: 600px) {
-  .sidenav a {font-size: 25px;}
-  .fixedbottom a {font-size: 15px;}
-  .main {margin-left: 250px}
+  .sidenav a {font-size: 22px;}
+  .fixedbottom a {font-size: 12px;}
+  .dotcomma {margin-left: 220px}
   .main {font-size: 18px;}
+  .evanhosni {padding-left: 210px;}
 }
 
-@media screen and (max-height: 425px) {
-  .sidenav a {font-size: 25px;}
-  .fixedbottom a {font-size: 15px;}
+@media screen and (max-height: 440px) {
+  .sidenav a {font-size: 22px;}
+  .fixedbottom a {font-size: 12px;}
   .main {font-size: 18px;}
 }
 
 </style>
 </head>
 <body>
+
+<div class="simplegame">
+  <script type="text/javascript" src="simple-game.js"></script>
+</div>
 
 <div class="sidenav">
   <a onClick="show('evanhosni')" style="font-weight:bolder; font-size:300%">evan hosni</a>
@@ -96,10 +123,15 @@ body {
 </div>
 
 <div id="evanhosni" class="main">
-  <h2>evanhosni</h2>
-  <p>born part frog, part man.</p>
-  <p>don't make me say it.</p>
-  <p>alright fuck it, ima say it. pierce is a bitty and kyle is a swashbuckler.</p>
+  <div class="evanhosni">
+    <p>evan is interested in sound design and.</p>
+    <p>video games.</p>
+    <br><br><br><br><br><br><br><br><br><br>
+    <p>he has achieved a bachelor's degree in</p>
+    <p>interdisciplinary music studies from</p>
+    <p>Berklee College of Music, and is ready</p>
+    <p>to start a career in the gaming industry.</p>
+  </div>
 </div>
   
 <div id="dotcomma" class="main" style="display:none">
