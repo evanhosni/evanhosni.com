@@ -71,7 +71,7 @@ DOMDisplay.prototype.scrollPlayerIntoView = function() {
   if (center.y < top + margin) {
     this.wrap.scrollTop = center.y - margin;
   } else if (center.y > bottom - margin) {
-    this.wrap.scrollTop = center.y + margin - height;
+    return false;
   }
 };
 
@@ -94,45 +94,41 @@ var simpleLevelPlan = [[ // initial input for Level
   "                                                                                                ",
   "                                                                                                ",
   "                                                                                                ",
-  "                                     =                                        o                 ",
+  "                                                                                                ",
+  "                                     =                                                          ",
   "                                                                                                ",
   "                    xxx                                                   xxx x x x x x xxxxxxxx",
-  "                                                xxxx                                            ",
+  "                                o               xxxx                                            ",
   "                               xxxxx                          xxxx                              ",
   "                      xxxxx         xxxx                                        =               ",
-  "        @           x     x!!!!!!!!!!!!x                                                        ",
-  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-],
-[
-  "                                       x",
-  "                                       x",
-  "       o         =        o             ",
-  "                                        ",
-  "xxx                xxxxxxxxxxxxxxxxxxxxx",
-  "  xx        o o x  x                    ",
-  "  x @      xxxxx   x                    ",
-  "  xxxxx            x                    ",
-  "      x!!!!!!!!!!!!x                    ",
-  "      xxxxxxxxxxxxxx                    ",
-],
-[
-  "                      ",
-  "                      ",
-  "                      ",
-  "                      ",
-  "                      ",
-  "                      ",
-  "                      ",
-  "                      ",
-  "                      ",
-  "                      ",
-  "                      ",
-  "  x             o    x",
-  "  x @           xx   x",
-  "  xxxxx    xx    =   x",
-  "      xxx!!!!!!!!!!xxx",
-  "      xxxxx!!!!xxxxxxx",
-  "                      "
+  "   !                                                                     @                      ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                  ",
+  "                                                                                                ",
+  "                                                                                                ",
+  "                                                                                                ",
+  "                                                                                                ",
+  "                                                                                                ",
+  "                                                                                                ",
+  "                                                                                                ",
+  "                                                                                                ",
+  "                                                                                                ",
+  "                                                                                                ",
+  "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+  "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
 ]];
 
 var actorChars = { // key for actor characters
@@ -433,6 +429,15 @@ function runLevel(level, Display, andThen) {
   });
 }
 
+function sendMail()
+{
+    var yourMessage = document.getElementById("message").value;
+    var subject = document.getElementById("selectList").value;
+    document.location.href = "mailto:chrisgreg23@googlemail.com?subject="
+        + encodeURIComponent(subject)
+        + "&body=" + encodeURIComponent(yourMessage);
+}
+
 function runGame(plans, Display) {
   function startLevel(n) {
     runLevel(new Level(plans[n]), Display, function(status) {
@@ -441,8 +446,7 @@ function runGame(plans, Display) {
       } else if (n < plans.length - 1) {
         startLevel(n + 1);
       } else {
-        console.log("you win!");
-        desktop.mail( new URI( "mailto:javaexamplecenter@gmail.com?subject=Test%20message" ) );
+        sendMail();
       }
     });
   }
