@@ -7,7 +7,9 @@
 <style>
 body {
   font-family: courier;
-  display: inline;
+  display: absolute;
+  margin: 0;
+  zoom: 100%;
 }
 
 .sidenav {
@@ -67,18 +69,18 @@ body {
 .instructions {
   position: absolute;
   margin-top: 525px;
-  color: rgb(50, 50, 50);
+  color: rgb(60, 60, 60);
   line-height: 0.25;
   padding-left: 1225px;
   z-index: 2;
-  text-align: right;
+  text-align: center;
   font-size: 20px;
   font-weight: bold;
 }
 
 .profilepic {
   position: absolute;
-  margin-top: 301px;
+  margin-top: 300px;
   margin-left: 900px;
   z-index: 1;
 }
@@ -92,20 +94,33 @@ body {
 	line-height: 0.25;
 }
 
-
-@media screen and (max-height: 500px) {
-  .fixedbottom {position: relative;}
+.luthiery {
+    margin-left: 375px;
+    margin-right: 50px;
+    margin-top: 350px;
+    font-size: 25px;
+	color: #000000;
+	line-height: 0.25;
 }
 
-@media screen and (max-width: 800px) {
+
+@media screen and (max-height: 900px) {
+  .fixedbottom {position: relative;}
+  html {zoom: 0.75;}
+}
+
+@media screen and (max-width: 1920px) {
+  html {zoom: 0.75;}
 }
 
 @media screen and (max-width: 600px) {
+  html {zoom: 0.5;}
   .sidenav a {font-size: 22px;}
   .fixedbottom a {font-size: 12px;}
 }
 
 @media screen and (max-height: 440px) {
+  html {zoom: 0.5;}
   .sidenav a {font-size: 22px;}
   .fixedbottom a {font-size: 12px;}
 }
@@ -123,7 +138,7 @@ body {
   <div class="fixedbottom">
 	<a href="mailto:evankhaledhosni@gmail.com">email</a>
 	<a href="https://www.linkedin.com/in/evanhosni/">linkedin</a>
-	<a href="https://soundcloud.com/evanhosni">soundcloud</a>
+	<a href="https://soundcloud.com/evanhosni/popular-tracks">soundcloud</a>
 	<a href="https://evan-cat.herokuapp.com/">itch</a>
 	<a>download resume pdf</a>
   </div>
@@ -137,7 +152,7 @@ body {
 
 <div id="evanhosni" class="main">
   <div class="evanhosni">
-    <p><span style="color:rgb(100, 100, 100); font-weight:bold">evan</span> is interested in sound design and.</p>
+    <p><span style="color:rgb(100, 100, 100); font-weight:bold">evan</span> is interested in sound design and</p>
     <p>video games.</p>
     <br><br><br><br><br><br><br><br><br><br>
     <p>he has achieved a bachelor's degree in</p>
@@ -189,11 +204,13 @@ body {
 </div>
 
 <div id="luthiery" class="main" style="display:none">
-  <h2>luthiery</h2>
-  <p>This sidebar is as tall as its content (the links), and is always shown.</p>
-  <p>Scroll down the page to see the result.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera 
-  fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <div class="luthiery">
+    <h2>luthiery</h2>
+    <p>This sidebar is as tall as its content (the links), and is always shown.</p>
+    <p>Scroll down the page to see the result.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera 
+    fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  </div>
 </div>
 
 <script>
