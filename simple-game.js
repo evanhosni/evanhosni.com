@@ -123,7 +123,7 @@ var simpleLevelPlan = [[ // initial input for Level
   "                              xxxxxxx                                                           ",
   "                                                                         xxxxx                  ",
   "                           xxx                                                                  ",
-  "                      xxx        |     xxxxxxxxxxxxxxxxxxxxxxxxxxxxx                            ",
+  "                      xxx        |     xxxxxxx  xxxxxxx  xxxxxx  xxx                            ",
   "                                                                                                ",
   "                 xxx                                                                            ",
   "                     xxxxxxxxxxxxxxxxxxx                                                        ",
