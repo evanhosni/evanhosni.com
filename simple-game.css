@@ -32,13 +32,13 @@
 }
 
 .won .player {
-  box-shadow: -4px -7px 8px green, 4px -7px 8px green;
+  box-shadow: -4px -7px 8px rgb(255, 220, 0), 4px -7px 8px rgb(255, 220, 0);
 }
 
 .game {
   overflow: hidden;
   max-width: 1920px;
-  max-height: 300px;
-  position: relative;
-  float: left;
+  max-height: 820px;
+  position: absolute;
+  top: 0;
 }
