@@ -24,7 +24,7 @@ body {
 .fixedbottom {
 	position: fixed;
 	bottom: 0px;
-	padding-bottom: 50px;
+	bottom: 5%;
 }
 
 .sidenav a {
@@ -45,22 +45,30 @@ body {
 	font-size: 20px;
 }
 
-.simplegame {
-}
-
 .main {
   line-height: 0.25;
   font-size: 25px;
 }
 
+.simplegame {
+  position: relative;
+  float: top;
+}
+
 .evanhosni {
+  position: absolute;
   margin-top: 300px;
-  color: #ffffff;
+  color: #f3f3f3;
   line-height: 0.25;
-  background: #000000;
-  padding-top: 10px;
-  padding-bottom: 10px;
   padding-left: 300px;
+  z-index: 2;
+}
+
+.profilepic {
+  position: absolute;
+  margin-top: 301px;
+  margin-left: 900px;
+  z-index: 1;
 }
 
 .dotcomma {
@@ -75,40 +83,27 @@ body {
 
 @media screen and (max-height: 500px) {
   .fixedbottom {position: relative;}
-  .evanhosni {margin-top: 75px;}
 }
 
 @media screen and (max-width: 800px) {
-  .dotcomma {margin-left: 320px}
-  .dotcomma {margin-right: 25px}
-  .main {font-size: 20px;}
-  .evanhosni {padding-left: 250px;}
 }
 
 @media screen and (max-width: 600px) {
   .sidenav a {font-size: 22px;}
   .fixedbottom a {font-size: 12px;}
-  .dotcomma {margin-left: 220px}
-  .main {font-size: 18px;}
-  .evanhosni {padding-left: 210px;}
 }
 
 @media screen and (max-height: 440px) {
   .sidenav a {font-size: 22px;}
   .fixedbottom a {font-size: 12px;}
-  .main {font-size: 18px;}
 }
 
 </style>
 </head>
 <body>
 
-<div class="simplegame">
-  <script type="text/javascript" src="simple-game.js"></script>
-</div>
-
 <div class="sidenav">
-  <a onClick="show('evanhosni')" style="font-weight:bolder; font-size:300%">evan hosni</a>
+  <a onClick="show('evanhosni')" onClick="show('simplegame')" style="font-weight:bolder; font-size:300%">evan hosni</a>
   <a onClick="show('dotcomma')">[dotcomma]</a>
   <a onClick="show('sfxmuseum')">sfx museum</a>
   <a onClick="show('music')">music</a>
@@ -122,6 +117,12 @@ body {
   </div>
 </div>
 
+<div id="simplegame" class="main">
+  <div class="simplegame">
+    <script type="text/javascript" src="simple-game.js"></script>
+  </div>
+</div>
+
 <div id="evanhosni" class="main">
   <div class="evanhosni">
     <p>evan is interested in sound design and.</p>
@@ -131,6 +132,9 @@ body {
     <p>interdisciplinary music studies from</p>
     <p>Berklee College of Music, and is ready</p>
     <p>to start a career in the gaming industry.</p>
+  </div>
+  <div class="profilepic">
+    <img src="profile_pic.jpg" alt="profilepic" style="width:300px;height:300px;">
   </div>
 </div>
   
@@ -177,12 +181,32 @@ body {
 </div>
 
 <script>
-function show(id) {
-  var allah = document.getElementsByClassName('main');
-  for (var i = 0; i < allah.length; i++) {
-      allah[i].style.display = 'none';
-  }
-  document.getElementById(id).style.display = "block";
+function show(id) 
+{
+    var allah = document.getElementsByClassName('main');
+    for (var i = 0; i < allah.length; i++) 
+    {
+        allah[i].style.display = 'none';
+    }
+    
+    if (id != 'evanhosni') 
+    {
+        allah = document.getElementsByClassName('game');
+        for (var j = 0; j < allah.length; j++) 
+        {
+            allah[j].style.display = 'none';
+        }
+    }
+    else
+    {
+        allah = document.getElementsByClassName('game');
+        for (var k = 0; k < allah.length; k++) 
+        {
+            allah[k].style.display = 'block';
+        }
+    }
+    
+    document.getElementById(id).style.display = "block";
 }
 </script>
 
