@@ -21,6 +21,7 @@ body {
   overflow-x: hidden;
   padding-top: 50px;
   padding: 15px 0;
+  z-index: 3;
 }
 
 .fixedbottom {
@@ -104,25 +105,35 @@ body {
 }
 
 
-@media screen and (max-height: 900px) {
+@media screen and (max-width: 1919px) {
+  html {zoom: 0.9;}
+}
+@media screen and (max-width: 1727px) {
+  html {zoom: 0.8;}
+}
+@media screen and (max-width: 1535px) {
+  html {zoom: 0.7;}
+}
+@media screen and (max-width: 1343px) {
+  html {zoom: 0.6;}
+}
+@media screen and (max-width: 1151px) {
+  html {zoom: 0.5;}
+}
+@media screen and (max-width: 959px) {
+  html {zoom: 0.4;}
+}
+@media screen and (max-width: 767px) {
+  html {zoom: 0.3;}
+}
+@media screen and (max-width: 575px) {
+  html {zoom: 0.2;}
+}
+@media screen and (max-width: 383px) {
+  html {zoom: 0.1;}
+}
+@media screen and (max-height: 420px) {
   .fixedbottom {position: relative;}
-  html {zoom: 0.75;}
-}
-
-@media screen and (max-width: 1920px) {
-  html {zoom: 0.75;}
-}
-
-@media screen and (max-width: 600px) {
-  html {zoom: 0.5;}
-  .sidenav a {font-size: 22px;}
-  .fixedbottom a {font-size: 12px;}
-}
-
-@media screen and (max-height: 440px) {
-  html {zoom: 0.5;}
-  .sidenav a {font-size: 22px;}
-  .fixedbottom a {font-size: 12px;}
 }
 
 </style>
