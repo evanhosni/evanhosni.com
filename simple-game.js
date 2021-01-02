@@ -122,7 +122,7 @@ var simpleLevelPlan = [[ // initial input for Level
   "                         |    xxxxxxx                                                           ",
   "                              x                            xxx      =      xx                   ",
   "                           xxxx                                                                 ",
-  "                   xxx                    xx    =    xxxxx     xxxxx          |    xx           ",
+  "                   xxx                    xx    =    xxxxx     xxxxx          |   xxx           ",
   "                                              |                                                 ",
   "                         xxx                               xxx         xx                  =x   ",
   "                                 |                                                              ",
