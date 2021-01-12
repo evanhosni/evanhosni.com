@@ -33,8 +33,9 @@ body {
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  text-shadow: 0px 0px 5px #ffffff;
+  text-shadow: 0px 0px 6px #ffffff;
   font-size: 28px;
+  font-weight: bold;
   color: #000000;
   display: block;
   cursor: pointer;
@@ -86,41 +87,13 @@ body {
   z-index: 1;
 }
 
-.dotcomma {
-    margin-left: 375px;
-    margin-right: 50px;
-    margin-top: 10%;
-    font-size: 25px;
-	color: #000000;
-	line-height: 0.25;
-}
-/*
-* {
-  box-sizing: border-box;
-}
-
-.bg-image {
-  height: 50%; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.img1 { background-image: <img src="profile_pic.jpg">; }
-.img2 { background-image: src="profile_pic.jpg"; }
-.img3 { background-image: src="profile_pic.jpg"; }
-.img4 { background-image: src="profile_pic.jpg"; }
-.img5 { background-image: src("img_forest.jpg"); }
-.img6 { background-image: url("img_woods.jpg"); }
-*/
-
-.bg-image .bg-text {
+.bg-text {
 	padding: 50px;
 	position: relative;
 	z-index: 2;
 	text-align: center;
 	color: white;
-	background-color: rgba(0,0,0, 0.25);
+	background-color: rgba(0,0,0, 0.5);
 	border: 10px solid #000000;
 	margin-left: 420px;
 	margin-right: 420px;
@@ -128,13 +101,13 @@ body {
 	margin-bottom: 100px;
 }
 
-.bg-image{
+.dotcomma-bg{
 	position: relative;
 	overflow: hidden;
 	height: 100%;
 }
 
-.bg-image:before {
+.dotcomma-bg:before {
 	content: ' ';
 	display: block;
 	position: fixed;
@@ -143,28 +116,52 @@ body {
 	width: 100%;
 	height: 100%;
 	z-index: 1;
-	opacity: 0.3;
-	background-image: url('dotcomma_background.png');
+	opacity: 0.8;
+	background-image: url('dotcomma_bg.png');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
-.gamesounds {
-    margin-left: 375px;
-    margin-right: 50px;
-    margin-top: 10%;
-    font-size: 25px;
-	color: #000000;
-	line-height: 0.25;
+.gamesounds-bg{
+	position: relative;
+	overflow: hidden;
+	height: 100%;
 }
 
-.luthiery {
-    margin-left: 375px;
-    margin-right: 50px;
-    margin-top: 10%;
-    font-size: 25px;
-	color: #000000;
-	line-height: 0.25;
+.gamesounds-bg:before {
+	content: ' ';
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0.8;
+	background-image: url('bucj1.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.luthiery-bg{
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+}
+
+.luthiery-bg:before {
+	content: ' ';
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0.8;
+	background-image: url('luthiery_bg2.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 
 
@@ -242,8 +239,8 @@ body {
   </div>
 </div>
 
-<div id="dotcomma" class="main bg-image" style="display:none">
-	<div class="bg-image">
+<div id="dotcomma" class="main" style="display:none">
+	<div class="dotcomma-bg">
 		<div class="bg-text">
 			<p><span style="font-weight:bold">[dotcomma] trailer</span></p>
 			<iframe width="1152" height="648" src="https://www.youtube.com/embed/HN7prNGWukY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -254,69 +251,73 @@ body {
 		</div>
 		<div class="bg-text">
 			<p><span style="font-weight:bold">gameplay preview</span></p>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/Albj0v5SqyU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe width="1152" height="648" src="https://www.youtube.com/embed/Albj0v5SqyU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<p>[dotcomma] is under construction.</p>
 			<p>wait</p>
 			<p>the name? pierce</p>
 			<p>the ween? small</p>
 		</div>
 	</div>
-	<!--<div class="bg-image">
-	<img src="dotcomma_background.png">
-	</div>-->
 </div>
 
 <div id="gamesounds" class="main" style="display:none">
-  <div class="bg-text">
-    <p><span style="font-weight:bold">Angrybots fuckpierce demo</span></p>
-    <iframe width="1120" height="440" src="https://www.youtube.com/embed/N4lwmlBqJLo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p>[dotcomma] is under construction.</p>
-    <p>my name a pierce and</p>
-    <p>the name? pierce</p>
-    <p>the ween? small</p>
-  </div>
-  <div class="bg-text">
-    <p><span style="font-weight:bold">Foley/SFX demo</span></p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/8qayumkTKuU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p>[dotcomma] is under construction.</p>
-    <p>wait</p>
-    <p>the name? pierce</p>
-    <p>the ween? small</p>
-  </div>
-  <div class="bg-text">
-    <p><span style="font-weight:bold">Vertical Score demo</span></p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/saLHzBTWYvM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p>[dotcomma] is under construction.</p>
-    <p>my name a pierce and</p>
-    <p>the name? pierce</p>
-    <p>the ween? small</p>
-  </div>
-  <div class="bg-text">
-    <p><span style="font-weight:bold">User Interface SFX demo</span></p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/iaNCHxaVzvY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p>[dotcomma] is under construction.</p>
-    <p>wait</p>
-    <p>the name? pierce</p>
-    <p>the ween? small</p>
-  </div>
+	<div class="gamesounds-bg">
+		<div class="bg-text">
+			<p><span style="font-weight:bold">Angrybots fuckpierce demo</span></p>
+			<iframe width="1152" height="450" src="https://www.youtube.com/embed/N4lwmlBqJLo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<p>[dotcomma] is under construction.</p>
+			<p>my name a pierce and</p>
+			<p>the name? pierce</p>
+			<p>the ween? small</p>
+		</div>
+		<div class="bg-text">
+			<p><span style="font-weight:bold">Foley/SFX demo</span></p>
+			<iframe width="1152" height="648" src="https://www.youtube.com/embed/8qayumkTKuU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<p>[dotcomma] is under construction.</p>
+			<p>wait</p>
+			<p>the name? pierce</p>
+			<p>the ween? small</p>
+		</div>
+		<div class="bg-text">
+			<p><span style="font-weight:bold">Vertical Score demo</span></p>
+			<iframe width="1152" height="648" src="https://www.youtube.com/embed/saLHzBTWYvM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<p>[dotcomma] is under construction.</p>
+			<p>my name a pierce and</p>
+			<p>the name? pierce</p>
+			<p>the ween? small</p>
+		</div>
+		<div class="bg-text">
+			<p><span style="font-weight:bold">User Interface SFX demo</span></p>
+			<iframe width="1152" height="648" src="https://www.youtube.com/embed/iaNCHxaVzvY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<p>[dotcomma] is under construction.</p>
+			<p>wait</p>
+			<p>the name? pierce</p>
+			<p>the ween? small</p>
+		</div>
+	</div>
 </div>
 
 <div id="luthiery" class="main" style="display:none">
-  <div class="bg-text">
-    <p><span style="font-weight:bold">luthiery</span></p>
-    <iframe width="1120" height="630" src="https://www.youtube.com/embed/Rn5STf4ovXk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p>i've been working on guitars since before pierce had a fuckin balls</p>
-    <p>wait</p>
-    <p>the name? pierce</p>
-    <p>the ween? small</p>
-  </div>
-  <div class="bg-text">
-    <p><span style="font-weight:bold">luthiery</span></p>
-    <p>i've been working on guitars since before pierce had a fuckin balls</p>
-    <p>wait</p>
-    <p>the name? pierce</p>
-    <p>the ween? small</p>
-  </div>
+	<div class="luthiery-bg">
+		<div class="bg-text">
+			<p><span style="font-weight:bold">luthiery</span></p>
+			<iframe width="1152" height="648" src="https://www.youtube.com/embed/Rn5STf4ovXk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<p>i've been working on guitars since before pierce had a fuckin balls</p>
+			<p>wait</p>
+			<p>the name? pierce</p>
+			<p>the ween? small</p>
+		</div>
+		<div class="bg-text">
+			<img src="luthiery_bg.png" style="width:80%;height:80%;">
+		</div>
+		<div class="bg-text">
+			<p><span style="font-weight:bold">luthiery</span></p>
+			<p>i've been working on guitars since before pierce had a fuckin balls</p>
+			<p>wait</p>
+			<p>the name? pierce</p>
+			<p>the ween? small</p>
+		</div>
+	</div>
 </div>
 
 <script>
