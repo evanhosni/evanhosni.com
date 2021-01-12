@@ -88,15 +88,15 @@ body {
 }
 
 .bg-text {
-	padding: 50px;
+	padding: 2.5%;
 	position: relative;
 	z-index: 2;
 	text-align: center;
 	color: white;
 	background-color: rgba(0,0,0, 0.5);
 	border: 10px solid #000000;
-	margin-left: 420px;
-	margin-right: 420px;
+	margin-left: 22.5%;
+	margin-right: 20%;
 	margin-top: 5%;
 	margin-bottom: 100px;
 }
@@ -108,10 +108,10 @@ body {
 
 iframe{
 position: absolute;
-top: 0;
-left: 0;
-width: 90%;
-height: 90%;
+bottom: 2.5%;
+left: 2.5%;
+width: 95%;
+height: 95%;
 }
 
 .dotcomma-bg{
@@ -172,7 +172,7 @@ height: 90%;
 	height: 100%;
 	z-index: 1;
 	opacity: 0.8;
-	background-image: url('luthiery_bg.png');
+	background-image: url('luthiery_bg2.png');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
@@ -256,7 +256,6 @@ height: 90%;
 <div id="dotcomma" class="main" style="display:none">
 	<div class="dotcomma-bg">
 		<div class="bg-text">
-			<p><span style="font-weight:bold">[dotcomma] trailer</span></p>
 			<div class="video-wrapper">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HN7prNGWukY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
@@ -290,7 +289,7 @@ height: 90%;
 			<div class="video-wrapper">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/8qayumkTKuU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
-			<p>With a short "The Last of Us" gameplay video as my canvas, I recorded foley in my backyard to create to recreate all in-game SFX.</p>
+			<p>With a short "The Last of Us" gameplay video as my canvas, I recorded foley in my backyard to recreate all in-game SFX.</p>
 		</div>
 		<div class="bg-text">
 			<p><span style="font-weight:bold">Vertical Score demo</span></p>
@@ -305,7 +304,7 @@ height: 90%;
 			<div class="video-wrapper">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/iaNCHxaVzvY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
-			<p>I recreated UI soinds for "Cooking Fever" using a mix of virtual instruments and samples.</p>
+			<p>I recreated UI sounds for "Cooking Fever" using a mix of virtual instruments and samples.</p>
 		</div>
 	</div>
 </div>
@@ -323,7 +322,7 @@ height: 90%;
 			<p>the ween? small</p>
 		</div>
 		<div class="bg-text">
-			<img src="luthiery_bg2.png" style="width:100%;height:100%;">
+			<img src="luthiery_bg.png" style="width:100%;height:100%;">
 		</div>
 		<div class="bg-text">
 			<p><span style="font-weight:bold">luthiery</span></p>
@@ -339,44 +338,36 @@ height: 90%;
 
 function show(id) 
 {
-    var allah = document.getElementsByClassName('main');
-    for (var i = 0; i < allah.length; i++) 
-    {
-        allah[i].style.display = 'none';
-    }
-    
-    if (id != 'evanhosni') 
-    {
-        allah = document.getElementsByClassName('game');
-        for (var j = 0; j < allah.length; j++) 
-        {
-            allah[j].style.display = 'none';
-        }
-    }
-    else
-    {
-        allah = document.getElementsByClassName('game');
-        for (var k = 0; k < allah.length; k++) 
-        {
-            allah[k].style.display = 'block';
-        }
-    }
-    
-    document.getElementById(id).style.display = "block";
+	if (document.getElementById(id).style.display != 'block')
+	{
+		var allah = document.getElementsByClassName('main');
+		for (var i = 0; i < allah.length; i++) 
+		{
+			allah[i].style.display = 'none';
+		}
+	
+		if (id != 'evanhosni') 
+		{
+			allah = document.getElementsByClassName('game');
+			for (var j = 0; j < allah.length; j++) 
+			{
+				allah[j].style.display = 'none';
+			}
+		}
+		else
+		{
+			allah = document.getElementsByClassName('game');
+			for (var k = 0; k < allah.length; k++) 
+			{
+				allah[k].style.display = 'block';
+			}
+		}
+	
+		document.getElementById(id).style.display = "block";
+		window.scrollTo(0,0);
+	}
 }
-/*
-function resetScrollPos(selector) {
-  var divs = document.querySelectorAll(selector);
-  for (var p = 0; p < divs.length; p++) {
-    if (Boolean(divs[p].style.transform)) { //for IE(10) and firefox
-      divs[p].style.transform = 'translate3d(0px, 0px, 0px)';
-    } else { //for chrome and safari
-      divs[p].style['-webkit-transform'] = 'translate3d(0px, 0px, 0px)';
-    }
-  }
-}
-resetScrollPos('.mblScrollableViewContainer');
-*/
+
 </script>
 
 </body>
