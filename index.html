@@ -62,18 +62,18 @@ body {
 
 .evanhosni {
 	position: absolute;
-	margin-top: 300px;
+	margin-top: 292px;
 	color: #ffffff;
-	line-height: 0.25;
+	line-height: 1.25;
 	padding-left: 300px;
 	z-index: 2;
 }
 
 .instructions {
 	position: absolute;
-	margin-top: 520px;
+	margin-top: 514px;
 	color: #ffffff;
-	line-height: 0.25;
+	line-height: 1.25;
 	padding-left: 1225px;
 	z-index: 2;
 	text-align: center;
@@ -87,6 +87,12 @@ body {
 	z-index: 1;
 }
 
+.profilepic-mobile {
+	display: none;
+	max-width: 300px;
+	margin: auto;
+}
+
 .bg-text {
 	padding: 2.5%;
 	position: relative;
@@ -95,10 +101,10 @@ body {
 	color: white;
 	background-color: rgba(0,0,0, 0.5);
 	border: 7px solid #000000;
-	margin-left: 22.5%;
-	margin-right: 20%;
+	margin: auto;
 	margin-top: 5%;
-	margin-bottom: 100px;
+	margin-bottom: 5%;
+	max-width: 720px;
 /*	box-shadow: 5px 5px 5px 5px #000000 */
 }
 
@@ -119,6 +125,8 @@ iframe{
 	position: relative;
 	overflow: hidden;
 	height: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .dotcomma-bg:before {
@@ -140,6 +148,8 @@ iframe{
 	position: relative;
 	overflow: hidden;
 	height: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .gamesounds-bg:before {
@@ -161,6 +171,8 @@ iframe{
 	position: relative;
 	overflow: hidden;
 	height: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .luthiery-bg:before {
@@ -177,6 +189,61 @@ iframe{
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
+
+@media screen and (min-width: 1200px) {
+	.bg-text {margin-left: 20%}
+	.bg-text {max-width: 60%}
+	.sidenav br {display: none;}
+}
+
+@media screen and (max-width: 1200px) {
+
+	.sidenav {
+		position: relative;
+		text-align: center;
+		margin: auto;
+		width: 100%;
+		line-height: 1.5;
+	}
+	
+	.fixedbottom {
+		position: relative;
+		margin-bottom: 4%;
+		line-height: 1.5;
+	}
+
+	.sidenav a {
+		display: inline-block;
+		padding: 6px 5% 6px 5%;
+	}
+
+	.main {
+		margin-top: -2.5%;
+		font-size: 18px;
+	}
+
+	.game {display: none!important;}
+	.instructions {display: none!important;}
+	.evanhosni {
+		text-align: center;
+		background-color: black;
+		padding: 2% 6% 2% 6%;
+		position: relative;
+		margin-top: 5%;
+		line-height: 1.4;
+	}
+
+	.evanhosni br {
+		display: none;
+	}
+
+	.profilepic {
+		display: none;
+	}
+
+	.profilepic-mobile {
+		display: block;
+	}
 
 /*
 @media screen and (max-width: 1919px) {
@@ -216,17 +283,10 @@ iframe{
 <body>
 
 <div class="sidenav">
-	<a onClick="show('evanhosni')" style="font-weight:bolder; font-size:300%">evan hosni</a>
+	<a onClick="show('evanhosni')" style="font-weight:bolder; font-size:300%">evan hosni</a><br>
 	<a onClick="show('dotcomma')">[dotcomma]</a>
 	<a onClick="show('gamesounds')">gamesounds</a>
 	<a onClick="show('luthiery')">luthiery</a>
-	<div class="fixedbottom">
-		<a href="mailto:evankhaledhosni@gmail.com">email</a>
-		<a href="https://www.linkedin.com/in/evanhosni/">linkedin</a>
-		<a href="https://soundcloud.com/evanhosni/popular-tracks">soundcloud</a>
-<!--	<a href="https://evan-cat.herokuapp.com/">about me</a>-->
-		<a>download resume pdf</a>
-	</div>
 </div>
 
 
@@ -237,20 +297,23 @@ iframe{
 
 <div id="evanhosni" class="main">
 	<div class="evanhosni">
-		<p><span style="color:rgb(100, 100, 100); font-weight:bold">evan</span> is interested in sound design and</p>
-		<p>video games.</p>
-		<br><br><br><br><br><br><br><br><br><br>
-		<p>he has achieved a bachelor's degree in</p>
-		<p>interdisciplinary music studies from</p>
-		<p>Berklee College of Music, and is eager</p>
-		<p>to start a <span style="color:rgb(255, 220, 0);">career in the gaming industry</span>.</p>
+		<p><span style="color:rgb(100, 100, 100); font-weight:bold">evan</span> is interested in sound design and<br>
+		video games.</p>
+		<br>
+		<div class="profilepic-mobile">
+			<img src="profile_pic.jpg" style="width:100%;">
+		</div>
+		<p>he has achieved a bachelor's degree in<br>
+		interdisciplinary music studies from<br>
+		Berklee College of Music, and is eager<br>
+		to start a <span style="color:rgb(255, 220, 0);">career in the gaming industry</span>.</p>
 	</div>
 	<div class="profilepic">
 		<img src="profile_pic.jpg" style="width:300px;height:300px;">
 	</div>
 	<div class="instructions">
-		<p>(use the arrow keys to</p>
-		<p>help him reach his goals)</p>
+		<p>(use the arrow keys to<br>
+		help him reach his goals)</p>
 	</div>
 </div>
 
@@ -331,6 +394,16 @@ iframe{
 			<p>the name? pierce</p>
 			<p>the ween? small</p>
 		</div>
+	</div>
+</div>
+
+<div class="sidenav">
+	<div class="fixedbottom">
+		<a href="mailto:evankhaledhosni@gmail.com">email</a>
+		<a href="https://www.linkedin.com/in/evanhosni/">linkedin</a>
+		<a href="https://soundcloud.com/evanhosni/popular-tracks">soundcloud</a>
+<!--	<a href="https://evan-cat.herokuapp.com/">about me</a>-->
+		<a>download resume pdf</a>
 	</div>
 </div>
 
