@@ -10,11 +10,12 @@ body {
 	display: absolute;
 	margin: 0;
 	zoom: 100%;
+	overflow-x: hidden;
 }
 
 .sidenav {
-	width: 320px;
 	position: fixed;
+	width: 20%;
 	z-index: 1;
 	top: 2%;
 	left: 2%;
@@ -26,6 +27,7 @@ body {
 
 .fixedbottom {
 	position: fixed;
+	width: 20%;
 	bottom: 0px;
 	bottom: 5%;
 }
@@ -190,36 +192,40 @@ iframe{
 	background-size: 100% 100%;
 }
 
-@media screen and (min-width: 1200px) {
-	.bg-text {margin-left: 20%}
-	.bg-text {max-width: 60%}
+@media screen and (min-width: 950px) {
+	.bg-text {
+		margin-left: 20%;
+		max-width: 60%
+	}
+
 	.sidenav br {display: none;}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 950px) {
 
 	.sidenav {
 		position: relative;
+		width: 100%;
 		text-align: center;
 		margin: auto;
-		width: 100%;
 		line-height: 1.5;
 	}
 	
 	.fixedbottom {
 		position: relative;
+		display: inline-block;
+		width: 100%;
 		margin-bottom: 4%;
 		line-height: 1.5;
 	}
 
 	.sidenav a {
 		display: inline-block;
-		padding: 6px 5% 6px 5%;
+		padding: 6px 4% 6px 4%;
 	}
 
 	.main {
-		margin-top: -2.5%;
-		font-size: 18px;
+		font-size: 20px;
 	}
 
 	.game {display: none!important;}
@@ -230,12 +236,12 @@ iframe{
 		padding: 2% 6% 2% 6%;
 		position: relative;
 		margin-top: 5%;
+		margin-bottom: 5%;
 		line-height: 1.4;
+		font-size: 110%;
 	}
 
-	.evanhosni br {
-		display: none;
-	}
+	.evanhosni br {display: none;}
 
 	.profilepic {
 		display: none;
