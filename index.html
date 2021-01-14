@@ -60,6 +60,7 @@ body {
 .simplegame {
 	position: relative;
 	float: top;
+	width: 100%;
 }
 
 .homepage {
@@ -202,7 +203,7 @@ iframe{
 	background-size: 100% 100%;
 }
 
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 960px) {
 	.bg-text {
 		margin-left: clamp(300px, 20%, 100%);
 		max-width: 60%
@@ -212,7 +213,7 @@ iframe{
 	
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 959px) {
 
 	body {
 		margin-top: 3%;
@@ -281,22 +282,7 @@ iframe{
 
 }
 
-/*
-for resizing 'evan hosni' in sidenav
-@media screen and (max-width: 1600px) {
-	.sidenav span {font-size: 1em;}
-make sure to re-add span surrounding "evan hosni" in sidenav div
-*/
 
-@media screen and (min-width: 1920px) {
-	.homepage {transform: scale(100vw);}
-	.game {transform: scale(100vw);}
-
-
-@media screen and (min-width: 951px) {
-	.homepage {transform: scale(0.5);}
-	.game {transform: scale(0.5);}
-}
 @media screen and (min-width: 960px) {
 	.homepage {transform: scale(0.5);}
 	.game {transform: scale(0.5);}
@@ -320,10 +306,8 @@ make sure to re-add span surrounding "evan hosni" in sidenav div
 @media screen and (min-width: 1920px) {
 	.homepage {transform: scale(1);}
 	.game {transform: scale(1);}
-}
-@media screen and (min-width: 1920px) {
-	.homepage {transform: scale(1);}
-	.game {transform: scale(1);}
+	.homepage {transform-origin: top left;}
+	.game {transform-origin: top left;}
 }
 @media screen and (min-width: 2112px) {
 	.homepage {transform: scale(1.1);}
@@ -333,51 +317,38 @@ make sure to re-add span surrounding "evan hosni" in sidenav div
 	.homepage {transform: scale(1.2);}
 	.game {transform: scale(1.2);}
 }
-
-/* 
-@media screen and (min-width: 768px) {
-	.game {transform: scale(0.4);}
-	.evanhosni {transform: scale(0.4);}
-	.instructions {transform: scale(0.4);}
-	.profilepic {transform: scale(0.4);}
+@media screen and (min-width: 2496px) {
+	.homepage {transform: scale(1.3);}
+	.game {transform: scale(1.3);}
 }
-@media screen and (min-width: 960px) {
-	.game {transform: scale(0.5);}
-	.evanhosni {transform: scale(0.5);}
-	.instructions {transform: scale(0.5);}
-	.profilepic {transform: scale(0.5);}
+@media screen and (min-width: 2688px) {
+	.homepage {transform: scale(1.4);}
+	.game {transform: scale(1.4);}
 }
-@media screen and (min-width: 1152px) {
-	.game {transform: scale(0.6);}
-	.evanhosni {transform: scale(0.6);}
-	.instructions {transform: scale(0.6);}
-	.profilepic {transform: scale(0.6);}
+@media screen and (min-width: 2880px) {
+	.homepage {transform: scale(1.5);}
+	.game {transform: scale(1.5);}
 }
-@media screen and (min-width: 1344px) {
-	.game {transform: scale(0.7);}
-	.evanhosni {transform: scale(0.7);}
-	.instructions {transform: scale(0.7);}
-	.profilepic {transform: scale(0.7);}
+@media screen and (min-width: 3072px) {
+	.homepage {transform: scale(1.6);}
+	.game {transform: scale(1.6);}
 }
-@media screen and (min-width: 1536px) {
-	.game {transform: scale(0.8);}
-	.evanhosni {transform: scale(0.8);}
-	.instructions {transform: scale(0.8);}
-	.profilepic {transform: scale(0.8);}
+@media screen and (min-width: 3264px) {
+	.homepage {transform: scale(1.7);}
+	.game {transform: scale(1.7);}
 }
-@media screen and (min-width: 1728px) {
-	.game {transform: scale(0.9);}
-	.evanhosni {transform: scale(0.9);}
-	.instructions {transform: scale(0.9);}
-	.profilepic {transform: scale(0.9);}
+@media screen and (min-width: 3456px) {
+	.homepage {transform: scale(1.8);}
+	.game {transform: scale(1.8);}
 }
-@media screen and (min-width: 1920px) {
-	.game {transform: scale(1);}
-	.evanhosni {transform: scale(1);}
-	.instructions {transform: scale(1);}
-	.profilepic {transform: scale(1);}
+@media screen and (min-width: 3648px) {
+	.homepage {transform: scale(1.9);}
+	.game {transform: scale(1.9);}
 }
-*/
+@media screen and (min-width: 3840px) {
+	.homepage {transform: scale(2);}
+	.game {transform: scale(2);}
+}
 
 </style>
 </head>
@@ -602,6 +573,7 @@ function fillDiv(div, proportional)
 	});
 }
 */
+
 /*
 var maxWidth  = $('#outer').width();
 var maxHeight = $('#outer').height();
@@ -624,6 +596,13 @@ $(window).resize(function(evt) {
     $('#outer').css({'-webkit-transform': 'scale(' + scale + ')'});
     $('#wrap').css({ width: maxWidth * scale, height: maxHeight * scale });
 });
+*/
+
+/*
+function myFunction() {
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+}
 */
 
 </script>
