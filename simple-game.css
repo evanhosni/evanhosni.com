@@ -41,4 +41,7 @@
   max-height: 900px;
   position: absolute;
   top: 0;
+  transform-origin: 0 30%;
+  z-index: -1;
+
 }

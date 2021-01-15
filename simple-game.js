@@ -98,9 +98,9 @@ var simpleLevelPlan = [[ // initial input for Level
   "                                 |                                                              ",
   "                               xxxxx                              xxxxx                         ",
   "                                 |             =x    xx           x  |                          ",
-  "                                                          xxxxxxxxx                  x          ",
+  "                @                                         xxxxxxxxx                  x          ",
   "                         xxxx         xxxx                                          =x=       x ",
-  "                @                        x     =                                     x          ",
+  "                                         x     =                                     x          ",
   "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx       x          ",
   "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     | x          ",
   "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     xxx          ",
@@ -240,7 +240,7 @@ var wobbleSpeed = 8, wobbleDist = .07;
 // COIN CONSTRUCTOR
 function Coin(pos) {
   this.basePos = this.pos = pos.plus(new Vector(.2, .1)); // move it inward a little bit and track the original position
-  this.size = new Vector(.6, .6); // .6X.6 in size
+  this.size = new Vector(.7, .7); // .7X.7 in size
   this.wobble = Math.random() * Math.PI * 2; //  something to do with where it goes on the wave of a sin curve
 }
 
