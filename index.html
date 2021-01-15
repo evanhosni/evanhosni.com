@@ -13,579 +13,588 @@ body {
 	overflow-x: hidden;
 }
 
-.sidenav {
-	position: fixed;
-	width: 320px;
-	top: 2%;
-	left: 2%;
-	overflow: hidden;
-	padding-top: 50px;
-	padding: 15px 0;
-	z-index: 2;
-	text-shadow: -1px 0px 3px #ffffff;
-}
-
-.fixedbottom {
-	position: fixed;
-	width: 40%;
-	bottom: 5%;
-}
-
-.sidenav a {
-	padding: 6px 8px 6px 16px;
-	text-decoration: none;
-	font-size: 28px;
-	font-weight: bold;
-	color: #000000;
-	display: block;
-	cursor: pointer;
-	user-select:none;
-}
-
-.sidenav a:hover {
-	color: #ffb200;
-}
-
-.fixedbottom a {
-	font-size: 20px;
-}
-
-.main {
-	line-height: 1.4;
-	font-size: 25px;
-}
-
-.simplegame {
-	position: relative;
-	float: top;
-	width: 100%;
-}
-
-.homepage {
-	position: absolute;
-	transform-origin: 0 30%;
-	white-space: nowrap;
-	height: 900px;
-}
-
-.evanhosni {
-	position: absolute;
-	margin-top: 292px;
-	color: #ffffff;
-	line-height: 1.25;
-	padding-left: 300px;
-	z-index: 2;
-}
-
-.instructions {
-	position: absolute;
-	margin-top: 514px;
-	color: #ffffff;
-	line-height: 1.25;
-	padding-left: 1225px;
-	z-index: 2;
-	text-align: center;
-	font-size: 20px;
-}
-
-.profilepic {
-	position: absolute;
-	margin-top: 300px;
-	padding-left: 900px;
-	z-index: 1;
-}
-
-.profilepic-mobile {
-	display: none;
-	max-width: 300px;
-	margin: auto;
-}
-
-.bg-text {
-	padding: 2.5%;
-	position: relative;
-	z-index: 2;
-	text-align: center;
-	color: white;
-	background-color: rgba(0,0,0, 0.5);
-	border: 7px solid #000000;
-	margin: auto;
-	margin-top: 5%;
-	margin-bottom: 5%;
-	max-width: 720px;
-/*	box-shadow: 5px 5px 5px 5px #000000 */
-}
-
-.video-wrapper {
-	position: relative;
-	padding-bottom: 56.25%;
-}
-
-iframe{
-	position: absolute;
-	bottom: 2.5%;
-	left: 2.5%;
-	width: 95%;
-	height: 95%;
-}
-
-.dotcomma-bg{
-	position: relative;
-	overflow: hidden;
-	height: 100%;
-	padding-left: 5%;
-	padding-right: 5%;
-}
-
-.dotcomma-bg:before {
-	content: ' ';
-	display: block;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	opacity: 0.8;
-	background-image: url('dotcomma_bg.png');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-}
-
-.gamesounds-bg{
-	position: relative;
-	overflow: hidden;
-	height: 100%;
-	padding-left: 5%;
-	padding-right: 5%;
-}
-
-.gamesounds-bg:before {
-	content: ' ';
-	display: block;
-	position: fixed;
-	left: 0;
-	top: -8%;
-	width: 100%;
-	height: 110%;
-	z-index: -1;
-	opacity: 0.8;
-	background-image: url('gamesounds_bg.png');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-}
-
-.luthiery-bg{
-	position: relative;
-	overflow: hidden;
-	height: 100%;
-	padding-left: 5%;
-	padding-right: 5%;
-}
-
-.luthiery-bg:before {
-	content: ' ';
-	display: block;
-	position: fixed;
-	left: -10%;
-	top: -5%;
-	width: 120%;
-	height: 110%;
-	z-index: -1;
-	opacity: 0.8;
-	background-image: url('luthiery_bg.png');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-}
-
-/*GAME @MEDIA STUFF*/
-@media screen and (max-height: 495px) and (min-width: 960px) {
-	.homepage {transform-origin: top left;}
-	.game {transform-origin: top left;}
-}
-
-@media screen and (max-height: 585px) and (min-width: 960px) and (min-height: 450px) {
-	.homepage {transform-origin: 0 20%;}
-	.game {transform-origin: 0 20%;}
-}
-@media screen and (max-height: 540px) and (min-width: 960px) and (min-height: 450px) {
-	.homepage {transform-origin: 0 10%;}
-	.game {transform-origin: 0 10%;}
-}
-@media screen and (max-height: 495px) and (min-width: 960px) and (min-height: 450px) {
-	.homepage {transform-origin: top left;}
-	.game {transform-origin: top left;}
-}
-
-@media screen and (max-height: 648px) and (min-width: 1152px) and (min-height: 540px) {
-	.homepage {transform-origin: 0 20%;}
-	.game {transform-origin: 0 20%;}
-}
-@media screen and (max-height: 612px) and (min-width: 1152px) and (min-height: 540px) {
-	.homepage {transform-origin: 0 10%;}
-	.game {transform-origin: 0 10%;}
-}
-@media screen and (max-height: 576px) and (min-width: 1152px) and (min-height: 540px) {
-	.homepage {transform-origin: top left;}
-	.game {transform-origin: top left;}
-}
-
-@media screen and (max-height: 711px) and (min-width: 1344px) and (min-height: 630px) {
-	.homepage {transform-origin: 0 10%;}
-	.game {transform-origin: 0 10%;}
-}
-@media screen and (max-height: 657px) and (min-width: 1344px) and (min-height: 630px) {
-	.homepage {transform-origin: top left;}
-	.game {transform-origin: top left;}
-}
-
-@media screen and (max-height: 774px) and (min-width: 1536px) and (min-height: 720px) {
-	.homepage {transform-origin: 0 10%;}
-	.game {transform-origin: 0 10%;}
-}
-@media screen and (max-height: 738px) and (min-width: 1536px) and (min-height: 720px) {
-	.homepage {transform-origin: top left;}
-	.game {transform-origin: top left;}
-}
-
-@media screen and (max-height: 837px) and (min-width: 1728px) and (min-height: 810px) {
-	.homepage {transform-origin: top left;}
-	.game {transform-origin: top left;}
-}
-
-@media screen and (min-width: 0px) and (min-height: 0px) {
-	.homepage {transform: scale(0.5);}
-	.game {transform: scale(0.5);}
-}
-@media screen and (min-width: 960px) and (min-height: 450px) {
-	.homepage {transform: scale(0.5);}
-	.game {transform: scale(0.5);}
-}
-@media screen and (min-width: 1152px) and (min-height: 540px) {
-	.homepage {transform: scale(0.6);}
-	.game {transform: scale(0.6);}
-}
-@media screen and (min-width: 1344px) and (min-height: 630px) {
-	.homepage {transform: scale(0.7);}
-	.game {transform: scale(0.7);}
-}
-@media screen and (min-width: 1536px) and (min-height: 720px) {
-	.homepage {transform: scale(0.8);}
-	.game {transform: scale(0.8);}
-}
-@media screen and (min-width: 1728px) and (min-height: 810px) {
-	.homepage {transform: scale(0.9);}
-	.game {transform: scale(0.9);}
-}
-@media screen and (min-width: 1920px) and (min-height: 900px) {
-	.homepage {transform: scale(1);}
-	.game {transform: scale(1);}
-	.homepage {transform-origin: top left;}
-	.game {transform-origin: top left;}
-}
-@media screen and (min-width: 2112px) and (min-height: 990px) {
-	.homepage {transform: scale(1.1);}
-	.game {transform: scale(1.1);}
-}
-@media screen and (min-width: 2304px) and (min-height: 1080px) {
-	.homepage {transform: scale(1.2);}
-	.game {transform: scale(1.2);}
-}
-@media screen and (min-width: 2496px) and (min-height: 1170px) {
-	.homepage {transform: scale(1.3);}
-	.game {transform: scale(1.3);}
-}
-@media screen and (min-width: 2688px) and (min-height: 1260px) {
-	.homepage {transform: scale(1.4);}
-	.game {transform: scale(1.4);}
-}
-@media screen and (min-width: 2880px) and (min-height: 1350px) {
-	.homepage {transform: scale(1.5);}
-	.game {transform: scale(1.5);}
-}
-@media screen and (min-width: 3072px) and (min-height: 1440px) {
-	.homepage {transform: scale(1.6);}
-	.game {transform: scale(1.6);}
-}
-@media screen and (min-width: 3264px) and (min-height: 1530px) {
-	.homepage {transform: scale(1.7);}
-	.game {transform: scale(1.7);}
-}
-@media screen and (min-width: 3456px) and (min-height: 1620px) {
-	.homepage {transform: scale(1.8);}
-	.game {transform: scale(1.8);}
-}
-@media screen and (min-width: 3648px) and (min-height: 1710px) {
-	.homepage {transform: scale(1.9);}
-	.game {transform: scale(1.9);}
-}
-@media screen and (min-width: 3840px) and (min-height: 1800px) {
-	.homepage {transform: scale(2);}
-	.game {transform: scale(2);}
-}
-/*END OF GAME @MEDIA STUFF*/
-
-@media screen and (min-width: 960px) and (min-height: 370px) {
-	.bg-text {
-		margin-left: clamp(300px, 20%, 100%);
-		max-width: 60%;
-	}
-	
-	.sidenav br {display: none;}
-
-	.fixedbottom {white-space: nowrap;}
-	
-}
-
-@media screen and (max-width: 959px) , (max-height: 369px) {
-
-	body {
-		margin-top: 3%;
-		margin-bottom: 5%;
-	}
-
+/*SIDENAV CSS STUFF*/
 	.sidenav {
-		position: relative;
-		width: 100%;
-		text-align: center;
-		left: 0%;
-		margin: auto;
-		line-height: 1.5;
-		font-size: 90%;
+		position: fixed;
+		width: 320px;
+		top: 2%;
+		left: 2%;
+		overflow: hidden;
+		padding-top: 50px;
+		padding: 15px 0;
+		z-index: 2;
+		text-shadow: -1px 0px 3px #ffffff;
 	}
-	
+
 	.fixedbottom {
-		position: relative;
-		display: inline-block;
-		width: 100%;
-		line-height: 1.5;
+		position: fixed;
+		width: 40%;
+		bottom: 5%;
 	}
 
 	.sidenav a {
-		display: inline-block;
-		padding: 6px 4% 6px 4%;
-		font-size: 25px;
+		padding: 6px 8px 6px 16px;
+		text-decoration: none;
+		font-size: 28px;
+		font-weight: bold;
+		color: #000000;
+		display: block;
+		cursor: pointer;
+		user-select:none;
 	}
 
-	.main {
+	.sidenav a:hover {
+		color: #ffb200;
+	}
+
+	.fixedbottom a {
 		font-size: 20px;
 	}
 
-	.game {display: none!important;}
-
-	.homepage {
-		white-space: normal;
-		transform: scale(1);
-		position: relative;
-		height: inherit;
+/*MAIN CSS STUFF*/
+	.main {
+		line-height: 1.4;
+		font-size: 25px;
 	}
 
-	.instructions {display: none!important;}
-
-	.evanhosni {
-		text-align: center;
-		background-color: #000000;
-		padding: 2% 6% 2% 6%;
+	/*BEGINNING OF: if css order actually matters, return this section to after 'HOME PAGE CSS STUFF'.*/
+	.bg-text {
+		padding: 2.5%;
 		position: relative;
+		z-index: 2;
+		text-align: center;
+		color: white;
+		background-color: rgba(0,0,0, 0.5);
+		border: 7px solid #000000;
+		margin: auto;
 		margin-top: 5%;
 		margin-bottom: 5%;
-		line-height: 1.4;
-		font-size: 110%;
+		max-width: 720px;
+	/*	box-shadow: 5px 5px 5px 5px #000000 */
 	}
 
-	.evanhosni br {display: none;}
-	.evanhosni span {color:#ffffff!important; font-weight:normal!important;}
+	.video-wrapper {
+		position: relative;
+		padding-bottom: 56.25%;
+	}
+
+	iframe{
+		position: absolute;
+		bottom: 2.5%;
+		left: 2.5%;
+		width: 95%;
+		height: 95%;
+	}
+	/*END OF: if css order actually matters, return this section to after 'HOME PAGE CSS STUFF'.*/
+
+/*HOME PAGE CSS STUFF*/
+	.simplegame {
+		position: relative;
+		float: top;
+		width: 100%;
+	}
+
+	.homepage {
+		position: absolute;
+		transform-origin: 0 30%;
+		white-space: nowrap;
+		height: 900px;
+	}
+
+	.evanhosni {
+		position: absolute;
+		margin-top: 292px;
+		color: #ffffff;
+		line-height: 1.25;
+		padding-left: 300px;
+		z-index: 2;
+	}
+
+	.instructions {
+		position: absolute;
+		margin-top: 514px;
+		color: #ffffff;
+		line-height: 1.25;
+		padding-left: 1225px;
+		z-index: 2;
+		text-align: center;
+		font-size: 20px;
+	}
 
 	.profilepic {
-		display: none;
+		position: absolute;
+		margin-top: 300px;
+		padding-left: 900px;
+		z-index: 1;
 	}
 
 	.profilepic-mobile {
-		display: block;
+		display: none;
+		max-width: 300px;
+		margin: auto;
 	}
 
-}
+/*BACKGROUND CSS STUFF*/
+	.dotcomma-bg{
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.dotcomma-bg:before {
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0.8;
+		background-image: url('dotcomma_bg.png');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+
+	.gamesounds-bg{
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.gamesounds-bg:before {
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: 0;
+		top: -8%;
+		width: 100%;
+		height: 110%;
+		z-index: -1;
+		opacity: 0.8;
+		background-image: url('gamesounds_bg.png');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+
+	.luthiery-bg{
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.luthiery-bg:before {
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: -10%;
+		top: -5%;
+		width: 120%;
+		height: 110%;
+		z-index: -1;
+		opacity: 0.8;
+		background-image: url('luthiery_bg.png');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+
+/*GAME @MEDIA STUFF*/
+
+	@media screen and (max-height: 495px) and (min-width: 960px) {
+		.homepage {transform-origin: top left;}
+		.game {transform-origin: top left;}
+	}
+
+	@media screen and (max-height: 585px) and (min-width: 960px) and (min-height: 450px) {
+		.homepage {transform-origin: 0 20%;}
+		.game {transform-origin: 0 20%;}
+	}
+	@media screen and (max-height: 540px) and (min-width: 960px) and (min-height: 450px) {
+		.homepage {transform-origin: 0 10%;}
+		.game {transform-origin: 0 10%;}
+	}
+	@media screen and (max-height: 495px) and (min-width: 960px) and (min-height: 450px) {
+		.homepage {transform-origin: top left;}
+		.game {transform-origin: top left;}
+	}
+
+	@media screen and (max-height: 648px) and (min-width: 1152px) and (min-height: 540px) {
+		.homepage {transform-origin: 0 20%;}
+		.game {transform-origin: 0 20%;}
+	}
+	@media screen and (max-height: 612px) and (min-width: 1152px) and (min-height: 540px) {
+		.homepage {transform-origin: 0 10%;}
+		.game {transform-origin: 0 10%;}
+	}
+	@media screen and (max-height: 576px) and (min-width: 1152px) and (min-height: 540px) {
+		.homepage {transform-origin: top left;}
+		.game {transform-origin: top left;}
+	}
+
+	@media screen and (max-height: 711px) and (min-width: 1344px) and (min-height: 630px) {
+		.homepage {transform-origin: 0 10%;}
+		.game {transform-origin: 0 10%;}
+	}
+	@media screen and (max-height: 657px) and (min-width: 1344px) and (min-height: 630px) {
+		.homepage {transform-origin: top left;}
+		.game {transform-origin: top left;}
+	}
+
+	@media screen and (max-height: 774px) and (min-width: 1536px) and (min-height: 720px) {
+		.homepage {transform-origin: 0 10%;}
+		.game {transform-origin: 0 10%;}
+	}
+	@media screen and (max-height: 738px) and (min-width: 1536px) and (min-height: 720px) {
+		.homepage {transform-origin: top left;}
+		.game {transform-origin: top left;}
+	}
+
+	@media screen and (max-height: 837px) and (min-width: 1728px) and (min-height: 810px) {
+		.homepage {transform-origin: top left;}
+		.game {transform-origin: top left;}
+	}
+
+	@media screen and (min-width: 0px) and (min-height: 0px) {
+		.homepage {transform: scale(0.5);}
+		.game {transform: scale(0.5);}
+	}
+	@media screen and (min-width: 960px) and (min-height: 450px) {
+		.homepage {transform: scale(0.5);}
+		.game {transform: scale(0.5);}
+	}
+	@media screen and (min-width: 1152px) and (min-height: 540px) {
+		.homepage {transform: scale(0.6);}
+		.game {transform: scale(0.6);}
+	}
+	@media screen and (min-width: 1344px) and (min-height: 630px) {
+		.homepage {transform: scale(0.7);}
+		.game {transform: scale(0.7);}
+	}
+	@media screen and (min-width: 1536px) and (min-height: 720px) {
+		.homepage {transform: scale(0.8);}
+		.game {transform: scale(0.8);}
+	}
+	@media screen and (min-width: 1728px) and (min-height: 810px) {
+		.homepage {transform: scale(0.9);}
+		.game {transform: scale(0.9);}
+	}
+	@media screen and (min-width: 1920px) and (min-height: 900px) {
+		.homepage {transform: scale(1);}
+		.game {transform: scale(1);}
+		.homepage {transform-origin: top left;}
+		.game {transform-origin: top left;}
+	}
+	@media screen and (min-width: 2112px) and (min-height: 990px) {
+		.homepage {transform: scale(1.1);}
+		.game {transform: scale(1.1);}
+	}
+	@media screen and (min-width: 2304px) and (min-height: 1080px) {
+		.homepage {transform: scale(1.2);}
+		.game {transform: scale(1.2);}
+	}
+	@media screen and (min-width: 2496px) and (min-height: 1170px) {
+		.homepage {transform: scale(1.3);}
+		.game {transform: scale(1.3);}
+	}
+	@media screen and (min-width: 2688px) and (min-height: 1260px) {
+		.homepage {transform: scale(1.4);}
+		.game {transform: scale(1.4);}
+	}
+	@media screen and (min-width: 2880px) and (min-height: 1350px) {
+		.homepage {transform: scale(1.5);}
+		.game {transform: scale(1.5);}
+	}
+	@media screen and (min-width: 3072px) and (min-height: 1440px) {
+		.homepage {transform: scale(1.6);}
+		.game {transform: scale(1.6);}
+	}
+	@media screen and (min-width: 3264px) and (min-height: 1530px) {
+		.homepage {transform: scale(1.7);}
+		.game {transform: scale(1.7);}
+	}
+	@media screen and (min-width: 3456px) and (min-height: 1620px) {
+		.homepage {transform: scale(1.8);}
+		.game {transform: scale(1.8);}
+	}
+	@media screen and (min-width: 3648px) and (min-height: 1710px) {
+		.homepage {transform: scale(1.9);}
+		.game {transform: scale(1.9);}
+	}
+	@media screen and (min-width: 3840px) and (min-height: 1800px) {
+		.homepage {transform: scale(2);}
+		.game {transform: scale(2);}
+	}
+
+/*OTHER @MEDIA STUFF*/
+	@media screen and (min-width: 960px) and (min-height: 370px) {
+		.bg-text {
+			margin-left: clamp(300px, 20%, 100%);
+			max-width: 60%;
+		}
+	
+		.sidenav br {display: none;}
+
+		.fixedbottom {white-space: nowrap;}
+	
+	}
+
+	@media screen and (max-width: 959px) , (max-height: 369px) {
+
+		body {
+			margin-top: 3%;
+			margin-bottom: 5%;
+		}
+
+		.sidenav {
+			position: relative;
+			width: 100%;
+			text-align: center;
+			left: 0%;
+			margin: auto;
+			line-height: 1.5;
+			font-size: 90%;
+		}
+	
+		.fixedbottom {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			line-height: 1.5;
+		}
+
+		.sidenav a {
+			display: inline-block;
+			padding: 6px 4% 6px 4%;
+			font-size: 25px;
+		}
+
+		.main {
+			font-size: 20px;
+		}
+
+		.game {display: none!important;}
+
+		.homepage {
+			white-space: normal;
+			transform: scale(1);
+			position: relative;
+			height: inherit;
+		}
+
+		.instructions {display: none!important;}
+
+		.evanhosni {
+			text-align: center;
+			background-color: #000000;
+			padding: 2% 6% 2% 6%;
+			position: relative;
+			margin-top: 5%;
+			margin-bottom: 5%;
+			line-height: 1.4;
+			font-size: 110%;
+		}
+
+		.evanhosni br {display: none;}
+		.evanhosni span {color:#ffffff!important; font-weight:normal!important;}
+
+		.profilepic {
+			display: none;
+		}
+
+		.profilepic-mobile {
+			display: block;
+		}
+
+	}
 
 </style>
 </head>
 <body>
 
-<div class="sidenav">
-	<a onClick="show('evanhosni')" style="font-weight:bolder; font-size:300%">evan hosni</a><br>
-	<a onClick="show('dotcomma')">[dotcomma]</a>
-	<a onClick="show('gamesounds')">gamesounds</a>
-	<a onClick="show('luthiery')">luthiery</a>
-</div>
-
-<div class="simplegame">
-	<script type="text/javascript" src="simple-game.js"></script>
-</div>
-
-<div class="homepage">
-	<div id="evanhosni" class="main">
-		<div class="evanhosni">
-			<p><span style="color:rgb(100, 100, 100); font-weight:bold">evan</span> is interested in sound design and<br>
-			video games.</p>
-			<br>
-			<div class="profilepic-mobile">
-				<img src="profile_pic.jpg" style="width:100%;">
-			</div>
-			<p>he has achieved a bachelor's degree in<br>
-			interdisciplinary music studies from<br>
-			Berklee College of Music, and is eager<br>
-			to start a <span style="color:rgb(255, 220, 0);">career in the gaming industry</span>.</p>
-		</div>
-		<div class="profilepic">
-			<img src="profile_pic.jpg" style="width:300px;height:300px;">
-		</div>
-		<div class="instructions">
-			<p>(use the arrow keys to<br>
-			help him reach his goals)</p>
-		</div>
+<!--HTML CONTENT-->
+	<div class="sidenav">
+		<a onClick="show('evanhosni')" style="font-weight:bolder; font-size:300%">evan hosni</a><br>
+		<a onClick="show('dotcomma')">[dotcomma]</a>
+		<a onClick="show('gamesounds')">gamesounds</a>
+		<a onClick="show('luthiery')">luthiery</a>
 	</div>
-</div>
 
-<div id="dotcomma" class="main" style="display:none">
-	<div class="dotcomma-bg">
-		<div class="bg-text">
-			<div class="video-wrapper">
-				<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/HN7prNGWukY?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<div class="simplegame">
+		<script type="text/javascript" src="simple-game.js"></script>
+	</div>
+
+	<div class="homepage">
+		<div id="evanhosni" class="main">
+			<div class="evanhosni">
+				<p><span style="color:rgb(100, 100, 100); font-weight:bold">evan</span> is interested in sound design and<br>
+				video games.</p>
+				<br>
+				<div class="profilepic-mobile">
+					<img src="profile_pic.jpg" style="width:100%;">
+				</div>
+				<p>he has achieved a bachelor's degree in<br>
+				interdisciplinary music studies from<br>
+				Berklee College of Music, and is eager<br>
+				to start a <span style="color:rgb(255, 220, 0);">career in the gaming industry</span>.</p>
 			</div>
-		</div>
-		<div class="bg-text">
-			<p><span style="font-weight:bold">[dotcomma] is under construction.</span></p>
-			<p>With the help of two buddies gandalf and rottenburger, i have created a game and its dotcomma blah blah my name is pierce and sometimes i look down and cant even see my own dick. just like my hair, it seems to have retracted into my body..</p>
-		</div>
-		<div class="bg-text">
-			<p><span style="font-weight:bold">gameplay preview</span></p>
-			<div class="video-wrapper">
-				<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/Albj0v5SqyU?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="profilepic">
+				<img src="profile_pic.jpg" style="width:300px;height:300px;">
+			</div>
+			<div class="instructions">
+				<p>(use the arrow keys to<br>
+				help him reach his goals)</p>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div id="gamesounds" class="main" style="display:none">
-	<div class="gamesounds-bg">
-		<div class="bg-text">
-			<p><span style="font-weight:bold">Music/SFX/Dialogue demo</span></p>
-			<div class="video-wrapper">
-				<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/N4lwmlBqJLo?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<div id="dotcomma" class="main" style="display:none">
+		<div class="dotcomma-bg">
+			<div class="bg-text">
+				<div class="video-wrapper">
+					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/HN7prNGWukY?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 			</div>
-			<p>"Angrybots" was given to me as a soundless Unity project.</p>
-			<p>I composed an original vertical score and created sound effects using a mix of digital synths, home-recorded foley, and audio samples I found online. I borrowed the help of two 'voice actors' for dialogue.</p>
-			<p>Using Wwise, I compiled all audio elements into the game engine.</p>
-		</div>
-		<div class="bg-text">
-			<p><span style="font-weight:bold">Foley/SFX demo</span></p>
-			<div class="video-wrapper">
-				<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/8qayumkTKuU?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="bg-text">
+				<p><span style="font-weight:bold">[dotcomma] is under construction.</span></p>
+				<p>With the help of two buddies gandalf and rottenburger, i have created a game and its dotcomma blah blah my name is pierce and sometimes i look down and cant even see my own dick. just like my hair, it seems to have retracted into my body..</p>
 			</div>
-			<p>With a short "The Last of Us" gameplay video as my canvas, I recorded foley in my backyard to recreate all in-game SFX.</p>
-			<p>I recorded myself crushing leaves, splashing in a puddle, and kicking a trash can.</p>
-		</div>
-		<div class="bg-text">
-			<p><span style="font-weight:bold">Vertical Score demo</span></p>
-			<div class="video-wrapper">
-				<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/saLHzBTWYvM?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="bg-text">
+				<p><span style="font-weight:bold">gameplay preview</span></p>
+				<div class="video-wrapper">
+					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/Albj0v5SqyU?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 			</div>
-			<p>I used this "Uncharted" clip to get more vertical score practice.</p>
-			<p>All instruments are virtual from my expansive VST collection. I created a five-layer vertical score and mixed it alongside gameplay footage to simulate the adding/subtracting of the layers in response to the fluctuating intensity of gameplay.</p>
-		</div>
-		<div class="bg-text">
-			<p><span style="font-weight:bold">UI Sounds demo</span></p>
-			<div class="video-wrapper">
-				<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/iaNCHxaVzvY?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-			<p>I recreated UI sounds for "Cooking Fever" using a mix of virtual instruments and samples.</p>
-		</div>
-		<div class="bg-text">
-			<img src="piercenut.jpg" style="width:50%;height:50%;">
 		</div>
 	</div>
-</div>
 
-<div id="luthiery" class="main" style="display:none">
-	<div class="luthiery-bg">
-		<div class="bg-text">
-			<div class="video-wrapper">
-				<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/Rn5STf4ovXk?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<div id="gamesounds" class="main" style="display:none">
+		<div class="gamesounds-bg">
+			<div class="bg-text">
+				<p><span style="font-weight:bold">Music/SFX/Dialogue demo</span></p>
+				<div class="video-wrapper">
+					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/N4lwmlBqJLo?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<p>"Angrybots" was given to me as a soundless Unity project.</p>
+				<p>I composed an original vertical score and created sound effects using a mix of digital synths, home-recorded foley, and audio samples I found online. I borrowed the help of two 'voice actors' for dialogue.</p>
+				<p>Using Wwise, I compiled all audio elements into the game engine.</p>
+			</div>
+			<div class="bg-text">
+				<p><span style="font-weight:bold">Foley/SFX demo</span></p>
+				<div class="video-wrapper">
+					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/8qayumkTKuU?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<p>With a short "The Last of Us" gameplay video as my canvas, I recorded foley in my backyard to recreate all in-game SFX.</p>
+				<p>I recorded myself crushing leaves, splashing in a puddle, and kicking a trash can.</p>
+			</div>
+			<div class="bg-text">
+				<p><span style="font-weight:bold">Vertical Score demo</span></p>
+				<div class="video-wrapper">
+					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/saLHzBTWYvM?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<p>I used this "Uncharted" clip to get more vertical score practice.</p>
+				<p>All instruments are virtual from my expansive VST collection. I created a five-layer vertical score and mixed it alongside gameplay footage to simulate the adding/subtracting of the layers in response to the fluctuating intensity of gameplay.</p>
+			</div>
+			<div class="bg-text">
+				<p><span style="font-weight:bold">UI Sounds demo</span></p>
+				<div class="video-wrapper">
+					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/iaNCHxaVzvY?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<p>I recreated UI sounds for "Cooking Fever" using a mix of virtual instruments and samples.</p>
+			</div>
+			<div class="bg-text">
+				<img src="piercenut.jpg" style="width:50%;height:50%;">
 			</div>
 		</div>
-		<div class="bg-text">
-			<img src="luthiery_bg2.png" style="width:100%;height:100%;">
-		</div>
-		<div class="bg-text">
-			<p><span style="font-weight:bold">luthiery</span></p>
-			<p>i've been working on guitars since before pierce had a fuckin balls</p>
-			<p>wait</p>
-			<p>the name? pierce</p>
-			<p>the ween? small</p>
-		</div>
 	</div>
-</div>
 
-<div class="sidenav">
-	<div class="fixedbottom">
-		<a target="_blank" rel="noopener noreferrer" href="mailto:evankhaledhosni@gmail.com">email</a>
-		<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/evanhosni/">linkedin</a>
-		<a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/evanhosni/popular-tracks">soundcloud</a>
-<!--	<a target="_blank" rel="noopener noreferrer" href="https://evan-cat.herokuapp.com/">about me</a>-->
-		<a>download resume pdf</a>
+	<div id="luthiery" class="main" style="display:none">
+		<div class="luthiery-bg">
+			<div class="bg-text">
+				<div class="video-wrapper">
+					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/Rn5STf4ovXk?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="bg-text">
+				<img src="luthiery_bg2.png" style="width:100%;height:100%;">
+			</div>
+			<div class="bg-text">
+				<p><span style="font-weight:bold">luthiery</span></p>
+				<p>i've been working on guitars since before pierce had a fuckin balls</p>
+				<p>wait</p>
+				<p>the name? pierce</p>
+				<p>the ween? small</p>
+			</div>
+		</div>
 	</div>
-</div>
+
+	<div class="sidenav">
+		<div class="fixedbottom">
+			<a target="_blank" rel="noopener noreferrer" href="mailto:evankhaledhosni@gmail.com">email</a>
+			<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/evanhosni/">linkedin</a>
+			<a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/evanhosni/popular-tracks">soundcloud</a>
+	<!--	<a target="_blank" rel="noopener noreferrer" href="https://evan-cat.herokuapp.com/">about me</a>-->
+			<a>download resume pdf</a>
+		</div>
+	</div>
 
 <script>
 
-function show(id) 
-{
-	if (document.getElementById(id).style.display != 'block')
+/*ALLAH*/
+	function show(id) 
 	{
-		var spaghet = document.getElementsByClassName('bideo');
-		for (var i = 0; i < spaghet.length; i++)
+		if (document.getElementById(id).style.display != 'block')
 		{
-			spaghet[i].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-		}
-		var allah = document.getElementsByClassName('main');
-		for (var i = 0; i < allah.length; i++) 
-		{
-			allah[i].style.display = 'none';
-		}
+			var spaghet = document.getElementsByClassName('bideo');
+			for (var i = 0; i < spaghet.length; i++)
+			{
+				spaghet[i].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+			}
+			var allah = document.getElementsByClassName('main');
+			for (var i = 0; i < allah.length; i++) 
+			{
+				allah[i].style.display = 'none';
+			}
 	
-		if (id != 'evanhosni') 
-		{
-			allah = document.getElementsByClassName('game');
-			for (var j = 0; j < allah.length; j++) 
+			if (id != 'evanhosni') 
 			{
-				allah[j].style.display = 'none';
+				allah = document.getElementsByClassName('game');
+				for (var j = 0; j < allah.length; j++) 
+				{
+					allah[j].style.display = 'none';
+				}
+				allah = document.getElementsByClassName('sidenav');
+				for (var j = 0; j < allah.length; j++) 
+				{
+					allah[j].style.textShadow = 'none';
+				}
 			}
-			allah = document.getElementsByClassName('sidenav');
-			for (var j = 0; j < allah.length; j++) 
+			else
 			{
-				allah[j].style.textShadow = 'none';
+				allah = document.getElementsByClassName('game');
+				for (var k = 0; k < allah.length; k++) 
+				{
+					allah[k].style.display = 'block';
+				}
+				allah = document.getElementsByClassName('sidenav');
+				for (var j = 0; j < allah.length; j++) 
+				{
+					allah[j].style.textShadow = '-1px 0px 3px #ffffff';
+				}
 			}
-		}
-		else
-		{
-			allah = document.getElementsByClassName('game');
-			for (var k = 0; k < allah.length; k++) 
-			{
-				allah[k].style.display = 'block';
-			}
-			allah = document.getElementsByClassName('sidenav');
-			for (var j = 0; j < allah.length; j++) 
-			{
-				allah[j].style.textShadow = '-1px 0px 3px #ffffff';
-			}
-		}
 
-		document.getElementById(id).style.display = "block";
-		window.scrollTo(0,0);
+			document.getElementById(id).style.display = "block";
+			window.scrollTo(0,0);
+		}
 	}
-}
 
 </script>
 
