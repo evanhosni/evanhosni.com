@@ -16,14 +16,13 @@ body {
 .sidenav {
 	position: fixed;
 	width: 320px;
-	z-index: 1;
 	top: 2%;
 	left: 2%;
 	overflow-x: hidden;
 	padding-top: 50px;
 	padding: 15px 0;
-	z-index: 3;
-	text-shadow: 0px 0px 3px #ffffff;
+	z-index: 2;
+	text-shadow: -1px 0px 3px #ffffff;
 }
 
 .fixedbottom {
@@ -203,19 +202,25 @@ iframe{
 }
 
 @media screen and (max-height: 375px) and (min-width: 960px) {
+	.sidenav {
+		position: absolute;
+	}
 	.fixedbottom {
+		margin-top: calc(2% + 190px);
 		position: relative;
-		margin-top: 192px;
+		bottom: auto;
 	}
 }
 
 @media screen and (min-width: 960px) {
 	.bg-text {
 		margin-left: clamp(300px, 20%, 100%);
-		max-width: 60%
+		max-width: 60%;
 	}
 	
 	.sidenav br {display: none;}
+
+	.fixedbottom {white-space: nowrap;}
 	
 }
 
@@ -288,13 +293,68 @@ iframe{
 
 }
 
+/*maybe find the right vw % instead?*//*
+@media screen and (max-height: 800px) and (max-width: 1727px) {
+	.homepage {transform-origin: 0 20%;}
+	.game {transform-origin: 0 20%;}
+}
+@media screen and (max-height: 700px) and (max-width: 1727px) {
+	.homepage {transform-origin: top left;}
+	.game {transform-origin: top left;}
+}
+*/
+@media screen and (max-height: 585px) and (min-width: 960px) and (max-width: 1151px) {
+	.homepage {transform-origin: 0 20%;}
+	.game {transform-origin: 0 20%;}
+}
+@media screen and (max-height: 540px) and (min-width: 960px) and (max-width: 1151px) {
+	.homepage {transform-origin: 0 10%;}
+	.game {transform-origin: 0 10%;}
+}
+@media screen and (max-height: 495px) and (min-width: 960px) and (max-width: 1151px) {
+	.homepage {transform-origin: top left;}
+	.game {transform-origin: top left;}
+}
+
+@media screen and (max-height: 648px) and (min-width: 1152px) and (max-width: 1343px) {
+	.homepage {transform-origin: 0 20%;}
+	.game {transform-origin: 0 20%;}
+}
+@media screen and (max-height: 612px) and (min-width: 1152px) and (max-width: 1343px) {
+	.homepage {transform-origin: 0 10%;}
+	.game {transform-origin: 0 10%;}
+}
+@media screen and (max-height: 576px) and (min-width: 1152px) and (max-width: 1343px) {
+	.homepage {transform-origin: top left;}
+	.game {transform-origin: top left;}
+}
+
+@media screen and (max-height: 711px) and (min-width: 1344px) and (max-width: 1535px) {
+	.homepage {transform-origin: 0 10%;}
+	.game {transform-origin: 0 10%;}
+}
+@media screen and (max-height: 657px) and (min-width: 1344px) and (max-width: 1535px) {
+	.homepage {transform-origin: top left;}
+	.game {transform-origin: top left;}
+}
+
+@media screen and (max-height: 774px) and (min-width: 1536px) and (max-width: 1727px) {
+	.homepage {transform-origin: 0 10%;}
+	.game {transform-origin: 0 10%;}
+}
+@media screen and (max-height: 738px) and (min-width: 1536px) and (max-width: 1727px) {
+	.homepage {transform-origin: top left;}
+	.game {transform-origin: top left;}
+}
+
+@media screen and (max-height: 837px) and (min-width: 1728px) and (max-width: 1919px) {
+	.homepage {transform-origin: top left;}
+	.game {transform-origin: top left;}
+}
 
 @media screen and (min-width: 960px) {
 	.homepage {transform: scale(0.5);}
 	.game {transform: scale(0.5);}
-	/*find aN alternative to these (below).
-	.homepage {transform-origin: top left;}
-	.game {transform-origin: top left;}*/
 }
 @media screen and (min-width: 1152px) {
 	.homepage {transform: scale(0.6);}
@@ -529,7 +589,7 @@ function show(id)
 			allah = document.getElementsByClassName('sidenav');
 			for (var j = 0; j < allah.length; j++) 
 			{
-				allah[j].style.textShadow = '0px 0px 3px #ffffff';
+				allah[j].style.textShadow = '-1px 0px 3px #ffffff';
 			}
 		}
 
