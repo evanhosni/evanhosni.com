@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>evan hosni</title>
+<link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="simple-game.css">
 <style>
@@ -28,7 +29,7 @@ body {
 
 	.fixedbottom {
 		position: fixed;
-		width: 40%;
+		width: 260px;
 		bottom: 5%;
 	}
 
@@ -146,7 +147,7 @@ body {
 	.dotcomma-bg:before {
 		content: ' ';
 		display: block;
-		position: fixed;
+		position: absolute;
 		left: 0;
 		top: 0;
 		width: 100%;
@@ -170,11 +171,11 @@ body {
 	.gamesounds-bg:before {
 		content: ' ';
 		display: block;
-		position: fixed;
+		position: absolute;
 		left: 0;
-		top: -8%;
+		top: 0;
 		width: 100%;
-		height: 110%;
+		height: 100%;
 		z-index: -1;
 		opacity: 0.8;
 		background-image: url('gamesounds_bg.png');
@@ -194,11 +195,11 @@ body {
 	.luthiery-bg:before {
 		content: ' ';
 		display: block;
-		position: fixed;
-		left: -10%;
-		top: -5%;
-		width: 120%;
-		height: 110%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
 		z-index: -1;
 		opacity: 0.8;
 		background-image: url('luthiery_bg.png');
@@ -414,6 +415,18 @@ body {
 			display: block;
 		}
 
+		.dotcomma-bg:before {
+			background-image: url('dotcomma_bg_mobile.png')
+		}
+
+		.gamesounds-bg:before {
+			background-image: url('gamesounds_bg_mobile.png')
+		}
+
+		.luthiery-bg:before {
+			background-image: url('luthiery_bg_mobile.png')
+		}
+
 	}
 
 </style>
@@ -439,7 +452,7 @@ body {
 				video games.</p>
 				<br>
 				<div class="profilepic-mobile">
-					<img src="profile_pic.jpg" style="width:100%;">
+					<img src="profile_pic.png" style="width:100%;">
 				</div>
 				<p>he has achieved a bachelor's degree in<br>
 				interdisciplinary music studies from<br>
@@ -447,7 +460,7 @@ body {
 				to start a <span style="color:rgb(255, 220, 0);">career in the gaming industry</span>.</p>
 			</div>
 			<div class="profilepic">
-				<img src="profile_pic.jpg" style="width:300px;height:300px;">
+				<img src="profile_pic.png" style="width:300px;height:300px;">
 			</div>
 			<div class="instructions">
 				<p>(use the arrow keys to<br>
