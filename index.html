@@ -95,6 +95,15 @@ body {
 		width: 95%;
 		height: 95%;
 	}
+
+	.audio-wrapper {
+		position: relative;
+		z-index: 2;
+		margin: auto;
+		margin-bottom: 7.5%;
+		max-width: 720px;
+	}
+
 	/*END OF: if css order actually matters, return this section to after 'HOME PAGE CSS STUFF'.*/
 
 /*HOME PAGE CSS STUFF*/
@@ -144,6 +153,26 @@ body {
 		margin: auto;
 	}
 
+/*MUSIC CSS STUFF*/
+	.music-text {
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		color: #000000;
+		font-size: 22px;
+		font-weight: bold;
+		margin: auto;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+
+	.music-logo {
+		position: fixed;
+		z-index: 2;
+		bottom: 30px;
+		right: -160px;
+	}
+
 /*BACKGROUND CSS STUFF*/
 	.dotcomma-bg{
 		position: relative;
@@ -163,7 +192,7 @@ body {
 		height: 100%;
 		z-index: -1;
 		opacity: 0.8;
-		background-image: url('dotcomma_bg.png');
+		background-image: url('dotcomma_bg.jpg');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: 100% 100%;
@@ -187,11 +216,26 @@ body {
 		height: 100%;
 		z-index: -1;
 		opacity: 0.8;
-		background-image: url('favicon.png');
-		background-repeat: no-repeat;
+		background-color: #000000;
 		background-attachment: fixed;
 		background-size: 100% 100%;
 	}
+
+/*	.music-bg:before {
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0.8;
+		background-image: url('music_bg.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}*/
 
 	.gamesounds-bg{
 		position: relative;
@@ -211,7 +255,7 @@ body {
 		height: 100%;
 		z-index: -1;
 		opacity: 0.8;
-		background-image: url('gamesounds_bg.png');
+		background-image: url('gamesounds_bg.jpg');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: 100% 100%;
@@ -235,7 +279,7 @@ body {
 		height: 100%;
 		z-index: -1;
 		opacity: 0.8;
-		background-image: url('luthiery_bg.png');
+		background-image: url('luthiery_bg.jpg');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: 100% 100%;
@@ -249,6 +293,10 @@ body {
 		.game {transform-origin: top left;}
 	}
 
+	@media screen and (max-height: 630px) and (min-width: 960px) and (min-height: 450px) {
+		.homepage {transform-origin: 0 30%;}
+		.game {transform-origin: 0 30%;}
+	}
 	@media screen and (max-height: 585px) and (min-width: 960px) and (min-height: 450px) {
 		.homepage {transform-origin: 0 20%;}
 		.game {transform-origin: 0 20%;}
@@ -262,6 +310,10 @@ body {
 		.game {transform-origin: top left;}
 	}
 
+	@media screen and (max-height: 684px) and (min-width: 1152px) and (min-height: 540px) {
+		.homepage {transform-origin: 0 30%;}
+		.game {transform-origin: 0 30%;}
+	}
 	@media screen and (max-height: 648px) and (min-width: 1152px) and (min-height: 540px) {
 		.homepage {transform-origin: 0 20%;}
 		.game {transform-origin: 0 20%;}
@@ -275,6 +327,10 @@ body {
 		.game {transform-origin: top left;}
 	}
 
+	@media screen and (max-height: 765px) and (min-width: 1344px) and (min-height: 630px) {
+		.homepage {transform-origin: 0 20%;}
+		.game {transform-origin: 0 20%;}
+	}
 	@media screen and (max-height: 711px) and (min-width: 1344px) and (min-height: 630px) {
 		.homepage {transform-origin: 0 10%;}
 		.game {transform-origin: 0 10%;}
@@ -375,6 +431,11 @@ body {
 			margin-left: clamp(300px, 20%, 100%);
 			max-width: 60%;
 		}
+
+		.music-text {
+			margin-left: clamp(300px, 10%, 100%);
+			max-width: 60%;
+		}
 	
 		.sidenav br {display: none;}
 
@@ -410,6 +471,7 @@ body {
 			display: inline-block;
 			padding: 6px 4% 6px 4%;
 			font-size: 25px;
+			line-height: 1.2;
 		}
 
 		.main {
@@ -449,6 +511,10 @@ body {
 			display: block;
 		}
 
+		.music-logo {
+			display: none;
+		}
+
 		.soundcloud:link {
 			display: none;
 		}
@@ -458,16 +524,20 @@ body {
 		}
 
 		.dotcomma-bg:before {
-			background-image: url('dotcomma_bg_mobile.png')
+			background-image: url('dotcomma_bg_mobile.jpg')
 		}
 
 		.gamesounds-bg:before {
-			background-image: url('gamesounds_bg_mobile.png')
+			background-image: url('gamesounds_bg_mobile.jpg')
 		}
 
 		.luthiery-bg:before {
-			background-image: url('luthiery_bg_mobile.png')
+			background-image: url('luthiery_bg_mobile.jpg')
 		}
+
+/*		.music-bg:before {
+			background-image: url('music_bg_mobile.jpg')
+		}*/
 
 	}
 
@@ -477,9 +547,9 @@ body {
 
 <!--HTML CONTENT-->
 	<div class="sidenav">
-		<a onClick="show('evanhosni')" style="font-size:300%">evan hosni</a><br><br>
+		<a onClick="show('evanhosni')" style="font-size:300%">evan hosni</a><br>
 		<a onClick="show('dotcomma')">[dotcomma]</a>
-		<a onClick="show('music')">music</a>
+		<a onClick="show('music')">/music</a>
 		<a onClick="show('gamesounds')">gamesounds</a>
 		<a onClick="show('luthiery')">luthiery</a>
 	</div>
@@ -534,12 +604,47 @@ body {
 
 	<div id="music" class="main" style="display:none">
 		<div class="music-bg">
-
+			<div class="music-text">
+			<p>Noclip</p>
+				<div class="audio-wrapper">
+					<audio controls>
+						<source src="Noclip.mp3" type="audio/mpeg">
+						Yikes! Your browser does not support the audio element. How embarrassing.
+					</audio>
+				</div>
+			<p>Talk to M,e Xenon</p>
+				<div class="audio-wrapper">
+					<audio controls>
+						<source src="Talk to M,e Xenon.mp3" type="audio/mpeg">
+						Yikes! Your browser does not support the audio element. How embarrassing.
+					</audio>
+				</div>
+			<p>Cryo <span style="font-size:18px">(I've Been Sleeping)</span></p>
+				<div class="audio-wrapper">
+					<audio controls>
+						<source src="Cryo (I've Been Sleeping).mp3" type="audio/mpeg">
+						Yikes! Your browser does not support the audio element. How embarrassing.
+					</audio>
+				</div>
+			<p>Aperture</p>
+				<div class="audio-wrapper">
+					<audio controls>
+						<source src="Aperture.mp3" type="audio/mpeg">
+						Yikes! Your browser does not support the audio element. How embarrassing.
+					</audio>
+				</div>
+			</div>
+		</div>
+		<div class="music-logo">
+			<img src="favicon (hi-res).png" style="width:25%;">
 		</div>
 	</div>
 
 	<div id="gamesounds" class="main" style="display:none">
 		<div class="gamesounds-bg">
+			<div class="bg-text">
+				<img src="gamesounds_bg.jpg" style="width:80%;height:80%;">
+			</div>
 			<div class="bg-text">
 				<p><span style="font-weight:bold">Music/SFX/Dialogue demo</span></p>
 				<div class="video-wrapper">
@@ -581,12 +686,17 @@ body {
 	<div id="luthiery" class="main" style="display:none">
 		<div class="luthiery-bg">
 			<div class="bg-text">
+				<p><span style="font-family:brush script mt,cursive; font-size:50px; font-style: italic; font-weight:lighter;">Luthiery</span> - /lo͞o′tē-ər-ē/</p>
+				<p><span style="font-style:italic;">noun</span>
+				<p>the construction and repair of stringed instruments.</p>
+			</div>
+			<div class="bg-text">
 				<div class="video-wrapper">
 					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/Rn5STf4ovXk?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</div>
 			<div class="bg-text">
-				<img src="luthiery_soundhole.png" style="width:100%;height:100%;">
+				<img src="luthiery_soundhole.jpg" style="width:100%;height:100%;">
 			</div>
 			<div class="bg-text">
 				<p><span style="font-weight:bold">luthiery</span></p>
@@ -621,6 +731,11 @@ body {
 			for (var i = 0; i < spaghet.length; i++)
 			{
 				spaghet[i].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+			}
+			var audios = document.getElementsByTagName('audio');
+			for(var i = 0, len = audios.length; i < len;i++)
+			{
+				audios[i].pause();
 			}
 			var allah = document.getElementsByClassName('main');
 			for (var i = 0; i < allah.length; i++) 
@@ -659,6 +774,15 @@ body {
 			window.scrollTo(0,0);
 		}
 	}
+
+	document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
 
 </script>
 
