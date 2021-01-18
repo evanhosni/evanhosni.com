@@ -46,7 +46,7 @@ body {
 	}
 
 	.sidenav a:hover {
-		color: #ffb200;
+		color: #ffb200 !important;
 	}
 
 	.fixedbottom a {
@@ -221,7 +221,7 @@ body {
 		background-size: 100% 100%;
 	}
 
-/*	.music-bg:before {
+	/*.music-bg:before {
 		content: ' ';
 		display: block;
 		position: fixed;
@@ -284,7 +284,6 @@ body {
 		background-attachment: fixed;
 		background-size: 100% 100%;
 	}
-
 
 /*GAME @MEDIA STUFF*/
 
@@ -433,7 +432,7 @@ body {
 		}
 
 		.music-text {
-			margin-left: clamp(300px, 10%, 100%);
+			margin-left: clamp(250px, 20%, 100%);
 			max-width: 60%;
 		}
 	
@@ -535,7 +534,7 @@ body {
 			background-image: url('luthiery_bg_mobile.jpg')
 		}
 
-/*		.music-bg:before {
+	/*	.music-bg:before {
 			background-image: url('music_bg_mobile.jpg')
 		}*/
 
@@ -547,11 +546,11 @@ body {
 
 <!--HTML CONTENT-->
 	<div class="sidenav">
-		<a onClick="show('evanhosni')" style="font-size:300%">evan hosni</a><br>
-		<a onClick="show('dotcomma')">[dotcomma]</a>
-		<a onClick="show('music')">/music</a>
-		<a onClick="show('gamesounds')">gamesounds</a>
-		<a onClick="show('luthiery')">luthiery</a>
+		<a  class="tab" onClick="show('evanhosni')" style="font-size:300%">evan hosni</a><br>
+		<a id="dotcomma_button" class="tab" onClick="show('dotcomma')">[dotcomma]</a>
+		<a id="music_button" class="tab" onClick="show('music')">/music</a>
+		<a id="gamesounds_button" class="tab" onClick="show('gamesounds')">gamesounds</a>
+		<a id="luthiery_button" class="tab" onClick="show('luthiery')">luthiery</a>
 	</div>
 
 	<div class="simplegame">
@@ -642,9 +641,6 @@ body {
 
 	<div id="gamesounds" class="main" style="display:none">
 		<div class="gamesounds-bg">
-			<div class="bg-text">
-				<img src="gamesounds_bg.jpg" style="width:80%;height:80%;">
-			</div>
 			<div class="bg-text">
 				<p><span style="font-weight:bold">Music/SFX/Dialogue demo</span></p>
 				<div class="video-wrapper">
@@ -755,6 +751,9 @@ body {
 				{
 					allah[j].style.textShadow = 'none';
 				}
+				wesley('tab');
+				document.getElementById(id + '_button').style.color = '#ffffff';
+				document.getElementById(id + '_button').style.textShadow = '0px 0px 5px #000000';
 			}
 			else
 			{
@@ -768,6 +767,8 @@ body {
 				{
 					allah[j].style.textShadow = '-1px 0px 3px #ffffff';
 				}
+				wesley('tab');
+				kesean('tab');
 			}
 
 			document.getElementById(id).style.display = "block";
@@ -775,14 +776,33 @@ body {
 		}
 	}
 
+	function wesley(className)
+	{
+		var navLinks = document.getElementsByClassName(className);
+		for (var j = 0; j< navLinks.length; j++)
+		{
+			navLinks[j].style.color = '#000000';
+			navLinks[j].style.textShadow = 'none';
+		}
+	}
+
+	function kesean(className)
+	{
+		var navLinks = document.getElementsByClassName(className);
+		for (var j = 0; j< navLinks.length; j++)
+		{
+			navLinks[j].style.textShadow = '-1px 0px 3px #ffffff';
+		}
+	}
+
 	document.addEventListener('play', function(e){
-    var audios = document.getElementsByTagName('audio');
-    for(var i = 0, len = audios.length; i < len;i++){
-        if(audios[i] != e.target){
-            audios[i].pause();
-        }
-    }
-}, true);
+		var audios = document.getElementsByTagName('audio');
+		for(var i = 0, len = audios.length; i < len;i++){
+		if(audios[i] != e.target){
+			audios[i].pause();
+			}
+		}
+	}, true);
 
 </script>
 
