@@ -18,11 +18,11 @@ body {
 	.sidenav {
 		position: fixed;
 		width: 320px;
-		top: 2%;
-		left: 2%;
+		top: 1%;
+		left: 1.5%;
 		overflow: hidden;
-		padding-top: 50px;
 		padding: 15px 0;
+		padding-top: 25px;
 		z-index: 2;
 		text-shadow: -1px 0px 3px #ffffff;
 	}
@@ -30,14 +30,15 @@ body {
 	.fixedbottom {
 		position: fixed;
 		width: 260px;
-		bottom: 5%;
+		bottom: 4%;
 	}
 
 	.sidenav a {
 		padding: 6px 8px 6px 16px;
 		text-decoration: none;
-		font-size: 28px;
+		font-size: 25px;
 		font-weight: bold;
+		line-height: 1;
 		color: #000000;
 		display: block;
 		cursor: pointer;
@@ -50,6 +51,14 @@ body {
 
 	.fixedbottom a {
 		font-size: 20px;
+	}
+
+	.soundcloud:link {
+		display: inherit;
+	}
+
+	.soundcloud-mobile:link {
+		display: none;
 	}
 
 /*MAIN CSS STUFF*/
@@ -160,6 +169,30 @@ body {
 		background-size: 100% 100%;
 	}
 
+	.music-bg{
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.music-bg:before {
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0.8;
+		background-image: url('favicon.png');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+
 	.gamesounds-bg{
 		position: relative;
 		overflow: hidden;
@@ -207,6 +240,7 @@ body {
 		background-attachment: fixed;
 		background-size: 100% 100%;
 	}
+
 
 /*GAME @MEDIA STUFF*/
 
@@ -415,6 +449,14 @@ body {
 			display: block;
 		}
 
+		.soundcloud:link {
+			display: none;
+		}
+
+		.soundcloud-mobile:link {
+			display: inherit;
+		}
+
 		.dotcomma-bg:before {
 			background-image: url('dotcomma_bg_mobile.png')
 		}
@@ -435,8 +477,9 @@ body {
 
 <!--HTML CONTENT-->
 	<div class="sidenav">
-		<a onClick="show('evanhosni')" style="font-weight:bolder; font-size:300%">evan hosni</a><br>
+		<a onClick="show('evanhosni')" style="font-size:300%">evan hosni</a><br><br>
 		<a onClick="show('dotcomma')">[dotcomma]</a>
+		<a onClick="show('music')">music</a>
 		<a onClick="show('gamesounds')">gamesounds</a>
 		<a onClick="show('luthiery')">luthiery</a>
 	</div>
@@ -486,6 +529,12 @@ body {
 					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/Albj0v5SqyU?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</div>
+		</div>
+	</div>
+
+	<div id="music" class="main" style="display:none">
+		<div class="music-bg">
+
 		</div>
 	</div>
 
@@ -553,8 +602,10 @@ body {
 		<div class="fixedbottom">
 			<a target="_blank" rel="noopener noreferrer" href="mailto:evankhaledhosni@gmail.com">email</a>
 			<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/evanhosni/">linkedin</a>
-			<a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/evanhosni/popular-tracks">soundcloud</a>
+			<a class="soundcloud" target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/evanhosni/popular-tracks">soundcloud</a>
+			<a class="soundcloud-mobile" target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/evanhosni">soundcloud</a>
 	<!--	<a target="_blank" rel="noopener noreferrer" href="https://evan-cat.herokuapp.com/">about me</a>-->
+	<!--	<a target="_blank" rel="noopener noreferrer" href="">itch</a>-->
 			<a>download resume pdf</a>
 		</div>
 	</div>
