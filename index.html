@@ -122,6 +122,7 @@ body {
 
 	.evanhosni {
 		position: absolute;
+		display: block;
 		margin-top: 292px;
 		color: #ffffff;
 		line-height: 1.25;
@@ -168,14 +169,80 @@ body {
 
 	.music-logo {
 		position: fixed;
+		display: block;
 		z-index: 2;
 		bottom: 3.5%;
 		right: 3.5%;
+		cursor: pointer;
+		transition: 0.6s ease;
+		user-select: none;
 	}
 
 	.music-logo:hover {
 		filter: invert(1);
 	}
+
+/*LUTHIERY SLIDESHOW CSS STUFF*/
+	.slides-bass {display: none;}
+
+	.slides-guitar {display: none;}
+	
+	.slideshow-container {
+		text-align: left;
+		max-width: 95%;
+		position: relative;
+		margin: auto;
+		font-family: Verdana, sans-serif;
+	}
+
+	.prev, .next {
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		padding: 16px;
+		margin-top: -40px;
+		color: #000000;
+		font-weight: bold;
+		font-size: 25px;
+		transition: 0.6s ease;
+		user-select: none;
+	}
+
+	.image-wrapper {
+		position: relative;
+		box-shadow: 0px 0px 25px 5px #000000;
+
+	}
+
+	.next {
+		right: 0;
+	}
+
+	.prev:hover, .next:hover {
+		filter: invert(1);
+		text-shadow: 0px 0px 5px #ffffff;
+	}
+
+	.slideshow-text {
+		position: relative;
+		width: 100%;
+		padding-top: 2.5%;
+		text-align: center;
+		color: white;
+		margin: auto;
+		font-family: courier;
+	}
+
+	/*.number-text {
+		color: #ffffff;
+		font-size: 12px;
+		font-weight: bold;
+		padding: 8px 12px;
+		position: absolute;
+		top: 0;
+		display:none;
+	}*/
 
 /*BACKGROUND CSS STUFF*/
 	.dotcomma-bg{
@@ -504,6 +571,7 @@ body {
 			right: auto;
 			margin: auto;
 			text-align: center;
+			width: 50px;
 		}
 
 		.soundcloud:link {
@@ -546,7 +614,7 @@ body {
 	</div>
 
 	<div class="homepage">
-		<div id="evanhosni" class="main">
+		<div id="evanhosni" class="main" style="display:block;">
 			<div class="evanhosni">
 				<p><span style="color:rgb(100, 100, 100); font-weight:bold">evan</span> is interested in sound design and<br>
 				video games.</p>
@@ -578,7 +646,11 @@ body {
 			</div>
 			<div class="bg-text">
 				<p><span style="font-weight:bold">[dotcomma] is under construction.</span></p>
-				<p>With the help of two buddies gandalf and rottenburger, i have created a game and its dotcomma blah blah my name is pierce and it seems that my hair has retracted into my body..If hired, my bald head will be shinier than evver.</p>
+				<p>An interactive music video game featuring all original music, [dotcomma] pioneers an untapped genre of video game.
+				The game features life-like physics, dream-like visuals, and a thought-provoking narrative that unfolds as the player
+				progresses through difficult challenges, and even more difficult decisions.</p>
+				<p>Explore the digital world of [dotcomma].</p>
+				<p>Summer 2020</p>
 			</div>
 			<div class="bg-text">
 				<p><span style="font-weight:bold">gameplay preview</span></p>
@@ -635,8 +707,8 @@ body {
 				<div class="video-wrapper">
 					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/N4lwmlBqJLo?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
-				<p>"Angrybots" was given to me as a soundless Unity project.</p>
-				<p>I composed an original vertical score and created sound effects using a mix of digital synths, home-recorded foley, and audio samples I found online. I borrowed the help of two 'voice actors' for dialogue.</p>
+				<p>"AngryBots" was given to me as a soundless Unity project.</p>
+				<p>I composed a vertical score and created sound effects using a mix of digital synths, home-recorded foley, and audio samples from online collections. I borrowed the help of two 'voice actors' for dialogue.</p>
 				<p>Using Wwise, I compiled all audio elements into the game engine.</p>
 			</div>
 			<div class="bg-text">
@@ -660,10 +732,10 @@ body {
 				<div class="video-wrapper">
 					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/iaNCHxaVzvY?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
-				<p>I recreated UI sounds for "Cooking Fever" using a mix of virtual instruments and samples.</p>
+				<p>I recreated UI sounds for "Cooking Fever" using a mix of virtual instruments and audio samples.</p>
 			</div>
 			<div class="bg-text">
-				<img src="piercenut.jpg" style="width:50%;height:50%;">
+				<img src="piercenut.jpg" style="display:block;margin:auto;width:50%">
 			</div>
 		</div>
 	</div>
@@ -676,19 +748,190 @@ body {
 				<p>the construction and repair of stringed instruments.</p>
 			</div>
 			<div class="bg-text">
+				<img src="luthiery_soundhole.jpg" style="display:block;width:100%">
+			</div>
+			<div class="bg-text">
+				<p>I've been building and repairing guitars for ten years.</p>
+				<p>I have a Certificate of Luthiery from Roberto-Venn School of Luthiery and
+				am certified to perform warranty repairs for popular brands such as Gibson, Fender, Hoshino
+				(Ibanez), Paul Reed Smith, C.F. Martin & Co., and more.</p>
+			</div>
+
+			<div class="bg-text">
+			<p><span style="font-weight:bold">'Ratfink Special' bass</span></p>
+				<div class="slideshow-container">
+				<div class="slides-bass">
+					<!--<div class="number-text">1 / 3</div>-->
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+						<img src="luthiery_pics/bass/glamour1.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">This build was inspired by the work of Luthier Jens Ritter,
+					as well as the musical styles of Les Claypool and Justin Chancellor.</div>
+				</div>
+				<div class="slides-bass">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+						<img src="luthiery_pics/bass/tonewood_closeup.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">It features an alder body and quilted maple top. The neck is maple and the 
+					fingerboard is African wenge. Together, this wood combination gives this instrument a tight, punchy tone -
+					rich in upper mids without sacrificing low end roundness. Versatility was the goal.</div>
+				</div>
+				<div class="slides-bass">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+						<img src="luthiery_pics/bass/sustain_ferrule_block.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">The bass is fitted with a custom brass ferrule block to make up for any lost sustain due to the
+					instrument's light-weight build.</div>
+				</div>
+				<div class="slides-bass">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+						<img src="luthiery_pics/bass/electronics.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">The onboard electronics include Bartolini Soapbar pickups and the Bartolini HR-5.2AP/918
+					3-Band NTMB+F Preamp Module. This system gives the bass a wide tonal range, while retaining the natural characteristics of tonewoods.</div>
+				</div>
+				<div class="slides-bass">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+						<img src="luthiery_pics/bass/glamour2.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">The hardware is all Hipshot.</div>
+				</div>
+				<div class="slides-bass">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+						<img src="luthiery_pics/bass/neck_carving.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">I hand-carved the neck to a thin profile with a shallow radius for ease and comfort of playability.</div>
+				</div>
+				<div class="slides-bass">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+						<img src="luthiery_pics/bass/play.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">The body shape is equal parts form and function.
+					Ideal for seated playing, this bass is a great option for studio sessions.</div>
+				</div>
+				<div class="slides-bass">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+						<img src="luthiery_pics/bass/headstock.jpg" style="display:block;width:100%">
+					</div>
+				</div>
+				</div>
+				<br>
+			</div>
+
+			<div class="bg-text">
+			<p><span style="font-weight:bold">'Stinky Muddy Monkey Buddy' guitar</span></p>
+				<div class="slideshow-container">
+				<div class="slides-guitar">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+						<img src="luthiery_pics/guitar/glamour1.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">My second acoustic build, this guitar was built with articulacy and expressivity in mind.</div>
+				</div>
+				<div class="slides-guitar">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+						<img src="luthiery_pics/guitar/top_and_back.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">I chose to use Central American bocote for back and sides, and spruce for the soundboard.
+					This tonewood combination as well as the OM body shape give this guitar a bright, sparkly tone with clear
+					high frequency definition.</div>
+				</div>
+				<div class="slides-guitar">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+						<img src="luthiery_pics/guitar/side_bending.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">The sides were bent using water, heat, and clamping pressure from a highly specialized jig.</div>
+				</div>
+				<div class="slides-guitar">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+						<img src="luthiery_pics/guitar/bracing.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">The soundboard is braced in the standard x-bracing style with scalloped tone bars.
+					These tone bars provide structural support and enhance higher frequencies.</div>
+				</div>
+				<div class="slides-guitar">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+						<img src="luthiery_pics/guitar/neck_carving.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">The neck is mahogany, hand-carved to an oval 'C' shape.</div>
+				</div>
+				<div class="slides-guitar">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+						<img src="luthiery_pics/guitar/bridge.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">The bridge was also hand-carved. Like the fretboard, it is ebony, which improves
+					the guitar's presence.</div>
+				</div>
+				<div class="slides-guitar">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+						<img src="luthiery_pics/guitar/inlay.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">This guitar features Mother of Pearl fretmarkers and a 12th-fret inlay of my insignia.</div>
+				</div>
+				<div class="slides-guitar">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+						<img src="luthiery_pics/guitar/spray_booth.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">I've heard talk that nitrocellulose lacquer provides significantly better tonal results
+					than other guitar finishes. I think that's a bunch of mumbo jumbo but I used it anyways, just in case.</div>
+				</div>
+				<div class="slides-guitar">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+						<img src="luthiery_pics/guitar/binding_slot.jpg" style="display:block;width:100%">
+					</div>
+					<div class="slideshow-text">There's nothing quite like building quality instruments in the warm Arizona sun.</div>
+				</div>
+				<div class="slides-guitar">
+					<div class="image-wrapper">
+						<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+						<img src="luthiery_pics/guitar/headstock.jpg" style="display:block;width:100%">
+					</div>
+				</div>
+
+				</div>
+				<br>
+			</div>
+
+			<div class="bg-text">
+				<p><span style="font-weight:bold">Setting Up Your Guitar with Evan and Milkshakes</span></p>
 				<div class="video-wrapper">
 					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/Rn5STf4ovXk?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
-			</div>
-			<div class="bg-text">
-				<img src="luthiery_soundhole.jpg" style="width:100%;height:100%;">
-			</div>
-			<div class="bg-text">
-				<p><span style="font-weight:bold">luthiery</span></p>
-				<p>i've been working on guitars since blah blah blah</p>
-				<p>my name's pierce</p>
-				<p>blah blah blah blah blah</p>
-				<p>more stuff about working on guitars</p>
+				<p>This video was created for a fundraiser for local nonprofit music venue "The Vera Project". The fundraiser generated over $30,000.</p>
 			</div>
 		</div>
 	</div>
@@ -723,7 +966,7 @@ body {
 				audios[i].pause();
 			}
 			var allah = document.getElementsByClassName('main');
-			for (var i = 0; i < allah.length; i++) 
+			for (var i = 0; i < allah.length; i++)
 			{
 				allah[i].style.display = 'none';
 			}
@@ -731,12 +974,12 @@ body {
 			if (id != 'evanhosni') 
 			{
 				allah = document.getElementsByClassName('game');
-				for (var j = 0; j < allah.length; j++) 
+				for (var k = 0; k < allah.length; k++)
 				{
-					allah[j].style.display = 'none';
+					allah[k].remove();
 				}
 				allah = document.getElementsByClassName('sidenav');
-				for (var j = 0; j < allah.length; j++) 
+				for (var j = 0; j < allah.length; j++)
 				{
 					allah[j].style.textShadow = 'none';
 				}
@@ -746,13 +989,14 @@ body {
 			}
 			else
 			{
+				runGame(simpleLevelPlan, DOMDisplay);
 				allah = document.getElementsByClassName('game');
-				for (var k = 0; k < allah.length; k++) 
+				for (var k = 0; k < allah.length; k++)
 				{
 					allah[k].style.display = 'block';
 				}
 				allah = document.getElementsByClassName('sidenav');
-				for (var j = 0; j < allah.length; j++) 
+				for (var j = 0; j < allah.length; j++)
 				{
 					allah[j].style.textShadow = '-1px 0px 3px #ffffff';
 				}
@@ -805,7 +1049,25 @@ body {
 		noRepeat = randomNum;
 	}
 
+	var slideIndex = [1,1];
+	var slideId = ["slides-bass", "slides-guitar"]
+	showSlides(1, 0);
+	showSlides(1, 1);
 
+	function plusSlides(n, no) {
+		showSlides(slideIndex[no] += n, no);
+	}
+
+	function showSlides(n, no) {
+		var i;
+		var x = document.getElementsByClassName(slideId[no]);
+		if (n > x.length) {slideIndex[no] = 1}    
+		if (n < 1) {slideIndex[no] = x.length}
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";  
+		}
+		x[slideIndex[no]-1].style.display = "block";  
+	}
 
 </script>
 
