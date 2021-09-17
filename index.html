@@ -112,6 +112,13 @@ body {
 		max-width: 720px;
 	}
 
+	.audio-wrapper-zorka {
+		position: relative;
+		z-index: 2;
+		margin: auto;
+		max-width: 720px;
+	}
+
 	/*END OF: if css order actually matters, return this section to after 'HOME PAGE CSS STUFF'.*/
 
 /*HOME PAGE CSS STUFF*/
@@ -296,6 +303,30 @@ body {
 		z-index: -1;
 		opacity: 0.8;
 		background-image: url('static_gifs/static0.gif');
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+
+	.filmsounds-bg{
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.filmsounds-bg:before {
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0.8;
+		background-image: url('zap.gif');
+		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: 100% 100%;
 	}
@@ -488,7 +519,7 @@ body {
 	}
 
 /*OTHER @MEDIA STUFF*/
-	@media screen and (min-width: 960px) and (min-height: 370px) {
+	@media screen and (min-width: 960px) and (min-height: 451px) {
 		.bg-text {
 			margin-left: clamp(300px, 20%, 100%);
 			max-width: 60%;
@@ -505,7 +536,7 @@ body {
 	
 	}
 
-	@media screen and (max-width: 959px) , (max-height: 369px) {
+	@media screen and (max-width: 959px) , (max-height: 450px) {
 
 		body {
 			margin-top: 3%;
@@ -621,6 +652,7 @@ body {
 		<a  class="tab" onClick="show('evanhosni')" style="font-size:300%">evan hosni</a><br>
 		<a id="dotcomma_button" class="tab" onClick="show('dotcomma')">[dotcomma]</a>
 		<a id="music_button" class="tab" onClick="show('music')">/music</a>
+		<a id="filmsounds_button" class="tab" onClick="show('filmsounds')">filmsounds</a>		
 		<a id="gamesounds_button" class="tab" onClick="show('gamesounds')">gamesounds</a>
 		<a id="luthiery_button" class="tab" onClick="show('luthiery')">luthiery</a>
 	</div>
@@ -632,7 +664,7 @@ body {
 	<div class="homepage">
 		<div id="evanhosni" class="main" style="display:block;">
 			<div class="evanhosni">
-				<p><span style="color:rgb(100, 100, 100); font-weight:bold">evan</span> is interested in sound design and<br>
+				<p><span style="color:rgb(100, 100, 100); font-weight:bold">^ evan</span> is interested in sound design and<br>
 				video games.</p>
 				<br>
 				<div class="profilepic-mobile">
@@ -666,7 +698,7 @@ body {
 				The game features life-like physics, dream-like visuals, and a thought-provoking narrative that unfolds as the player
 				progresses through difficult challenges, and even more difficult decisions.</p>
 				<p>Explore the digital world of [dotcomma].</p>
-				<p>Summer 2021</p>
+				<p>Coming Soon</p>
 			</div>
 			<div class="bg-text">
 				<p><span style="font-weight:bold">gameplay preview</span></p>
@@ -713,6 +745,25 @@ body {
 		</div>
 		<div class="music-logo">
 			<img src="favicon (hi-res).png" onClick="somebodyTouch()">
+		</div>
+	</div>
+
+	<div id="filmsounds" class="main" style="display:none">
+		<div class="filmsounds-bg">
+			<div class="bg-text">
+				<p><span style="font-weight:bold">Ultimate Invasion</span></p>
+				<div class="video-wrapper">
+					<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fultimateinvasion%2Fvideos%2F385133359787430%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>				</div>
+				<p>One of my favorite projects to work on, "Ultimate Invasion" is an Amazon Prime TV Show set to air 2-22-22. In this series, aliens from planet Zorka secretly invade Earth to explore the complicated experiences of human nature.</p>
+				<p>I was the sole sound designer for this show and after submitting my "Zorka Theme" idea to Director Dr. Greg LeSar, I was given the opportunity to be a composer as well. My music is featured in all 8 episodes.</p>
+				<p>Zorka Theme</p>
+				<div class="audio-wrapper-zorka">
+					<audio controls>
+						<source src="Zorka Theme.mp3" type="audio/mpeg">
+						Yikes! Your browser does not support the audio element. How embarrassing.
+					</audio>
+				</div>
+			</div>
 		</div>
 	</div>
 
