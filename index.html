@@ -2,654 +2,15 @@
 <html>
 <head>
 <title>evan hosni</title>
-<link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
+<link rel="shortcut icon" type="image/jpg" href="./assets/images/favicon.png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="simple-game.css">
 
-<meta property="og:image" content="thumbnail.png">
-<!-- <meta property="og:description" content="evan has achieved a bachelor's degree in interdisciplinary music studies from Berklee College of Music, and is eager to start a career in the gaming industry"> -->
+<meta property="og:image" content="./assets/images/thumbnail.png">
 <meta property="og:url"content="http://www.evanhosni.com" />
 <meta property="og:title" content="evan hosni" />
 
-<style>
-body {
-	font-family: courier;
-	display: absolute;
-	margin: 0;
-	zoom: 100%;
-	overflow-x: hidden;
-}
-
-/*SIDENAV CSS STUFF*/
-	.sidenav {
-		position: fixed;
-		width: 320px;
-		top: 1%;
-		left: 1.5%;
-		overflow: hidden;
-		padding: 15px 0;
-		padding-top: 25px;
-		z-index: 2;
-		text-shadow: -1px 0px 3px #ffffff;
-	}
-
-	.fixedbottom {
-		position: fixed;
-		width: 260px;
-		bottom: 4%;
-	}
-
-	.sidenav a {
-		padding: 6px 8px 6px 16px;
-		text-decoration: none;
-		font-size: 25px;
-		font-weight: bold;
-		line-height: 1;
-		color: #000000;
-		display: block;
-		cursor: pointer;
-		user-select:none;
-	}
-
-	.sidenav a:hover {
-		color: #ffb200 !important;
-	}
-
-	.fixedbottom a {
-		font-size: 20px;
-	}
-
-	.soundcloud:link {
-		display: inherit;
-	}
-
-	.soundcloud-mobile:link {
-		display: none;
-	}
-
-	.imdb:link {
-		display: inherit;
-	}
-
-	.imdb-mobile:link {
-		display: none;
-	}
-
-/*MAIN CSS STUFF*/
-	.main {
-		line-height: 1.4;
-		font-size: 25px;
-	}
-
-	/*BEGINNING OF: if css order actually matters, return this section to after 'HOME PAGE CSS STUFF'.*/
-	.bg-text {
-		padding: 2.5%;
-		position: relative;
-		z-index: 2;
-		text-align: center;
-		color: white;
-		background-color: rgba(0,0,0, 0.5);
-		border: 7px solid #000000;
-		margin: auto;
-		margin-top: 5%;
-		margin-bottom: 5%;
-		max-width: 720px;
-	/*	box-shadow: 5px 5px 5px 5px #000000 */
-	}
-
-	.video-wrapper {
-		position: relative;
-		padding-bottom: 56.25%;
-	}
-
-	iframe{
-		position: absolute;
-		bottom: 2.5%;
-		left: 2.5%;
-		width: 95%;
-		height: 95%;
-	}
-
-	.audio-wrapper {
-		position: relative;
-		z-index: 2;
-		margin: auto;
-		margin-bottom: 7.5%;
-		max-width: 720px;
-	}
-
-	.audio-wrapper-zorka {
-		position: relative;
-		z-index: 2;
-		margin: auto;
-		max-width: 720px;
-	}
-
-	/*END OF: if css order actually matters, return this section to after 'HOME PAGE CSS STUFF'.*/
-
-/*HOME PAGE CSS STUFF*/
-	.simplegame {
-		position: relative;
-		float: top;
-		width: 100%;
-	}
-
-	.homepage {
-		position: absolute;
-		transform-origin: 0 30%;
-		white-space: nowrap;
-		height: 900px;
-	}
-
-	.evanhosni {
-		position: absolute;
-		display: block;
-		margin-top: 292px;
-		color: #ffffff;
-		line-height: 1.25;
-		padding-left: 300px;
-		z-index: 2;
-	}
-
-	.instructions {
-		position: absolute;
-		margin-top: 514px;
-		color: #ffffff;
-		line-height: 1.25;
-		padding-left: 1225px;
-		z-index: 2;
-		text-align: center;
-		font-size: 20px;
-	}
-
-	.profilepic {
-		position: absolute;
-		margin-top: 300px;
-		padding-left: 900px;
-		z-index: 1;
-	}
-
-	.profilepic-mobile {
-		display: none;
-		max-width: 300px;
-		margin: auto;
-	}
-
-/*MUSIC CSS STUFF*/
-	.music-text {
-		position: relative;
-		z-index: 2;
-		text-align: center;
-		color: #000000;
-		font-size: 22px;
-		font-weight: bold;
-		margin: auto;
-		margin-top: 5%;
-		margin-bottom: 5%;
-	}
-
-	.music-logo {
-		position: fixed;
-		display: block;
-		z-index: 2;
-		bottom: 3.5%;
-		right: 3.5%;
-		cursor: pointer;
-		transition: 0.6s ease;
-		user-select: none;
-	}
-
-	.music-logo:hover {
-		filter: invert(1);
-	}
-
-/*LUTHIERY SLIDESHOW CSS STUFF*/
-	.slides-bass {display: none;}
-
-	.slides-guitar {display: none;}
-	
-	.slideshow-container {
-		text-align: left;
-		max-width: 95%;
-		position: relative;
-		margin: auto;
-		font-family: Verdana, sans-serif;
-	}
-
-	.prev, .next {
-		cursor: pointer;
-		position: absolute;
-		top: 50%;
-		width: auto;
-		padding: 16px;
-		margin-top: -40px;
-		color: #000000;
-		font-weight: bold;
-		font-size: 25px;
-		transition: 0.6s ease;
-		user-select: none;
-	}
-
-	.image-wrapper {
-		position: relative;
-		box-shadow: 0px 0px 25px 5px #000000;
-
-	}
-
-	.next {
-		right: 0;
-	}
-
-	.prev:hover, .next:hover {
-		filter: invert(1);
-		text-shadow: 0px 0px 5px #ffffff;
-	}
-
-	.slideshow-text {
-		position: relative;
-		width: 100%;
-		padding-top: 2.5%;
-		text-align: center;
-		color: white;
-		margin: auto;
-		font-family: courier;
-	}
-
-	/*.number-text {
-		color: #ffffff;
-		font-size: 12px;
-		font-weight: bold;
-		padding: 8px 12px;
-		position: absolute;
-		top: 0;
-		display:none;
-	}*/
-
-/*BACKGROUND CSS STUFF*/
-	.dotcomma-bg{
-		position: relative;
-		overflow: hidden;
-		height: 100%;
-		padding-left: 5%;
-		padding-right: 5%;
-	}
-
-	.dotcomma-bg:before {
-		content: ' ';
-		display: block;
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		opacity: 0.8;
-		background-image: url('dotcomma_bg.jpg');
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: 100% 100%;
-	}
-
-	.music-bg{
-		position: relative;
-		overflow: hidden;
-		height: 100%;
-		padding-left: 5%;
-		padding-right: 5%;
-	}
-
-	#music-bg-change {
-		content: ' ';
-		display: block;
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		opacity: 0.8;
-		background-image: url('static_gifs/static0.gif');
-		background-attachment: fixed;
-		background-size: 100% 100%;
-	}
-
-	.filmsounds-bg{
-		position: relative;
-		overflow: hidden;
-		height: 100%;
-		padding-left: 5%;
-		padding-right: 5%;
-	}
-
-	.filmsounds-bg:before {
-		content: ' ';
-		display: block;
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		opacity: 0.8;
-		background-image: url('zap.gif');
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: 100% 100%;
-	}
-
-	.gamesounds-bg{
-		position: relative;
-		overflow: hidden;
-		height: 100%;
-		padding-left: 5%;
-		padding-right: 5%;
-	}
-
-	.gamesounds-bg:before {
-		content: ' ';
-		display: block;
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		opacity: 0.8;
-		background-image: url('gamesounds_bg.jpg');
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: 100% 100%;
-	}
-
-	.luthiery-bg{
-		position: relative;
-		overflow: hidden;
-		height: 100%;
-		padding-left: 5%;
-		padding-right: 5%;
-	}
-
-	.luthiery-bg:before {
-		content: ' ';
-		display: block;
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		opacity: 0.8;
-		background-image: url('luthiery_bg.jpg');
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: 100% 100%;
-	}
-
-/*GAME @MEDIA STUFF*/
-
-	@media screen and (max-height: 495px) and (min-width: 960px) {
-		.homepage {transform-origin: top left;}
-		.game {transform-origin: top left;}
-	}
-
-	@media screen and (max-height: 630px) and (min-width: 960px) and (min-height: 450px) {
-		.homepage {transform-origin: 0 30%;}
-		.game {transform-origin: 0 30%;}
-	}
-	@media screen and (max-height: 585px) and (min-width: 960px) and (min-height: 450px) {
-		.homepage {transform-origin: 0 20%;}
-		.game {transform-origin: 0 20%;}
-	}
-	@media screen and (max-height: 540px) and (min-width: 960px) and (min-height: 450px) {
-		.homepage {transform-origin: 0 10%;}
-		.game {transform-origin: 0 10%;}
-	}
-	@media screen and (max-height: 495px) and (min-width: 960px) and (min-height: 450px) {
-		.homepage {transform-origin: top left;}
-		.game {transform-origin: top left;}
-	}
-
-	@media screen and (max-height: 684px) and (min-width: 1152px) and (min-height: 540px) {
-		.homepage {transform-origin: 0 30%;}
-		.game {transform-origin: 0 30%;}
-	}
-	@media screen and (max-height: 648px) and (min-width: 1152px) and (min-height: 540px) {
-		.homepage {transform-origin: 0 20%;}
-		.game {transform-origin: 0 20%;}
-	}
-	@media screen and (max-height: 612px) and (min-width: 1152px) and (min-height: 540px) {
-		.homepage {transform-origin: 0 10%;}
-		.game {transform-origin: 0 10%;}
-	}
-	@media screen and (max-height: 576px) and (min-width: 1152px) and (min-height: 540px) {
-		.homepage {transform-origin: top left;}
-		.game {transform-origin: top left;}
-	}
-
-	@media screen and (max-height: 765px) and (min-width: 1344px) and (min-height: 630px) {
-		.homepage {transform-origin: 0 20%;}
-		.game {transform-origin: 0 20%;}
-	}
-	@media screen and (max-height: 711px) and (min-width: 1344px) and (min-height: 630px) {
-		.homepage {transform-origin: 0 10%;}
-		.game {transform-origin: 0 10%;}
-	}
-	@media screen and (max-height: 657px) and (min-width: 1344px) and (min-height: 630px) {
-		.homepage {transform-origin: top left;}
-		.game {transform-origin: top left;}
-	}
-
-	@media screen and (max-height: 774px) and (min-width: 1536px) and (min-height: 720px) {
-		.homepage {transform-origin: 0 10%;}
-		.game {transform-origin: 0 10%;}
-	}
-	@media screen and (max-height: 738px) and (min-width: 1536px) and (min-height: 720px) {
-		.homepage {transform-origin: top left;}
-		.game {transform-origin: top left;}
-	}
-
-	@media screen and (max-height: 837px) and (min-width: 1728px) and (min-height: 810px) {
-		.homepage {transform-origin: top left;}
-		.game {transform-origin: top left;}
-	}
-
-	@media screen and (min-width: 0px) and (min-height: 0px) {
-		.homepage {transform: scale(0.5);}
-		.game {transform: scale(0.5);}
-	}
-	@media screen and (min-width: 960px) and (min-height: 450px) {
-		.homepage {transform: scale(0.5);}
-		.game {transform: scale(0.5);}
-	}
-	@media screen and (min-width: 1152px) and (min-height: 540px) {
-		.homepage {transform: scale(0.6);}
-		.game {transform: scale(0.6);}
-	}
-	@media screen and (min-width: 1344px) and (min-height: 630px) {
-		.homepage {transform: scale(0.7);}
-		.game {transform: scale(0.7);}
-	}
-	@media screen and (min-width: 1536px) and (min-height: 720px) {
-		.homepage {transform: scale(0.8);}
-		.game {transform: scale(0.8);}
-	}
-	@media screen and (min-width: 1728px) and (min-height: 810px) {
-		.homepage {transform: scale(0.9);}
-		.game {transform: scale(0.9);}
-	}
-	@media screen and (min-width: 1920px) and (min-height: 900px) {
-		.homepage {transform: scale(1);}
-		.game {transform: scale(1);}
-		.homepage {transform-origin: top left;}
-		.game {transform-origin: top left;}
-	}
-	@media screen and (min-width: 2112px) and (min-height: 990px) {
-		.homepage {transform: scale(1.1);}
-		.game {transform: scale(1.1);}
-	}
-	@media screen and (min-width: 2304px) and (min-height: 1080px) {
-		.homepage {transform: scale(1.2);}
-		.game {transform: scale(1.2);}
-	}
-	@media screen and (min-width: 2496px) and (min-height: 1170px) {
-		.homepage {transform: scale(1.3);}
-		.game {transform: scale(1.3);}
-	}
-	@media screen and (min-width: 2688px) and (min-height: 1260px) {
-		.homepage {transform: scale(1.4);}
-		.game {transform: scale(1.4);}
-	}
-	@media screen and (min-width: 2880px) and (min-height: 1350px) {
-		.homepage {transform: scale(1.5);}
-		.game {transform: scale(1.5);}
-	}
-	@media screen and (min-width: 3072px) and (min-height: 1440px) {
-		.homepage {transform: scale(1.6);}
-		.game {transform: scale(1.6);}
-	}
-	@media screen and (min-width: 3264px) and (min-height: 1530px) {
-		.homepage {transform: scale(1.7);}
-		.game {transform: scale(1.7);}
-	}
-	@media screen and (min-width: 3456px) and (min-height: 1620px) {
-		.homepage {transform: scale(1.8);}
-		.game {transform: scale(1.8);}
-	}
-	@media screen and (min-width: 3648px) and (min-height: 1710px) {
-		.homepage {transform: scale(1.9);}
-		.game {transform: scale(1.9);}
-	}
-	@media screen and (min-width: 3840px) and (min-height: 1800px) {
-		.homepage {transform: scale(2);}
-		.game {transform: scale(2);}
-	}
-
-/*OTHER @MEDIA STUFF*/
-	@media screen and (min-width: 960px) and (min-height: 451px) {
-		.bg-text {
-			margin-left: clamp(300px, 20%, 100%);
-			max-width: 60%;
-		}
-
-		.music-text {
-			margin-left: clamp(250px, 20%, 100%);
-			max-width: 60%;
-		}
-	
-		.sidenav br {display: none;}
-
-		.fixedbottom {white-space: nowrap;}
-	
-	}
-
-	@media screen and (max-width: 959px) , (max-height: 450px) {
-
-		body {
-			margin-top: 3%;
-			margin-bottom: 5%;
-		}
-
-		.sidenav {
-			position: relative;
-			width: 100%;
-			text-align: center;
-			left: 0%;
-			margin: auto;
-			line-height: 1.5;
-			font-size: 90%;
-		}
-	
-		.fixedbottom {
-			position: relative;
-			display: inline-block;
-			width: 100%;
-			line-height: 1.5;
-		}
-
-		.sidenav a {
-			display: inline-block;
-			padding: 6px 4% 6px 4%;
-			font-size: 25px;
-			line-height: 1.2;
-		}
-
-		.main {
-			font-size: 20px;
-		}
-
-		.game {display: none!important;}
-
-		.homepage {
-			white-space: normal;
-			transform: scale(1);
-			position: relative;
-			height: inherit;
-		}
-
-		.instructions {display: none!important;}
-
-		.evanhosni {
-			text-align: center;
-			background-color: #000000;
-			padding: 2% 6% 2% 6%;
-			position: relative;
-			margin-top: 5%;
-			margin-bottom: 5%;
-			line-height: 1.4;
-			font-size: 110%;
-		}
-
-		.evanhosni br {display: none;}
-		.evanhosni span {color:#ffffff!important; font-weight:normal!important;}
-
-		.profilepic {
-			display: none;
-		}
-
-		.profilepic-mobile {
-			display: block;
-		}
-
-		.music-logo {
-			position: relative;
-			bottom: auto;
-			right: auto;
-			margin: auto;
-			text-align: center;
-			width: 50px;
-		}
-
-		.soundcloud:link {
-			display: none;
-		}
-
-		.soundcloud-mobile:link {
-			display: inherit;
-		}
-
-		.imdb:link {
-			display: none;
-		}
-
-		.imdb-mobile:link {
-			display: inherit;
-		}
-
-		.dotcomma-bg:before {
-			background-image: url('dotcomma_bg_mobile.jpg')
-		}
-
-		.gamesounds-bg:before {
-			background-image: url('gamesounds_bg_mobile.jpg')
-		}
-
-		.luthiery-bg:before {
-			background-image: url('luthiery_bg_mobile.jpg')
-		}
-	
-	}
-
-</style>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
@@ -657,9 +18,9 @@ body {
 	<div class="sidenav">
 		<a  class="tab" onClick="show('evanhosni')" style="font-size:300%">evan hosni</a><br>
 		<a id="dotcomma_button" class="tab" onClick="show('dotcomma')">[dotcomma]</a>
-		<a id="music_button" class="tab" onClick="show('music')">/music</a>
-		<a id="filmsounds_button" class="tab" onClick="show('filmsounds')">filmsounds</a>		
-		<a id="gamesounds_button" class="tab" onClick="show('gamesounds')">gamesounds</a>
+		<a id="webdev_button" class="tab" onClick="show('webdev')">/webdev</a>
+		<a id="music_button" class="tab" onClick="show('music')">*music</a>
+		<a id="sound_design_button" class="tab" onClick="show('sound_design')">sound_design</a>
 		<a id="luthiery_button" class="tab" onClick="show('luthiery')">luthiery</a>
 	</div>
 
@@ -670,11 +31,11 @@ body {
 	<div class="homepage">
 		<div id="evanhosni" class="main" style="display:block;">
 			<div class="evanhosni">
-				<p><span style="color:rgb(100, 100, 100); font-weight:bold">^ evan</span> is interested in sound design and<br>
+				<p><span style="color:rgb(100, 100, 100); font-weight:bold"><span class="carrot">^ </span>evan</span> is interested in sound design and<br>
 				video games.</p>
 				<br>
 				<div class="profilepic-mobile">
-					<img src="profile_pic.png" style="width:100%;">
+					<img src="./assets/images/profile_pic.png" style="width:100%;">
 				</div>
 				<p>he has achieved a bachelor's degree in<br>
 				interdisciplinary music studies from<br>
@@ -682,7 +43,7 @@ body {
 				to start a <span style="color:rgb(255, 220, 0);">career in the gaming industry</span>.</p>
 			</div>
 			<div class="profilepic">
-				<img src="profile_pic.png" style="width:300px;height:300px;">
+				<img src="./assets/images/profile_pic.png" style="width:300px;height:300px;">
 			</div>
 			<div class="instructions">
 				<p>(use the arrow keys to<br>
@@ -715,6 +76,26 @@ body {
 		</div>
 	</div>
 
+	<div id="webdev" class="main" style="display:none">
+		<div class="webdev-bg">
+			<div class="bg-text">
+				<p><span style="font-weight:bold">Wacky-Wiki</span><br>
+				<a target="_blank" rel="noopener noreferrer" href="https://evanhosni.github.io/wackywiki/"><span style="font-size:large">-open in new tab-</span></a></p>
+				<iframe class="iframe-relative" src="https://evanhosni.github.io/wackywiki/" title="Iframe Example"></iframe>
+				<p>Wacky-Wiki is MadLibz with a modern twist. By allowing the user to input a topic of their choice, the possibilities are endless.</p>
+			</div>
+			<div class="bg-text">
+				<p><span style="font-weight:bold">MetaMemeMarket</span><br>
+				<a target="_blank" rel="noopener noreferrer" href="https://meta-meme-market.herokuapp.com/"><span style="font-size:large">-open in new tab-</span></a></p>
+				<iframe class="iframe-relative" src="https://meta-meme-market.herokuapp.com/" height="200" width="300" title="Iframe Example"></iframe>
+				<p>Bringing crypto and memes together, creators now have the opportunity to allow investors to buy part, or all, of the ownership of memes they've created. By allowing investment, creators now have the opportunity to fund their hobbies or careers.</p>
+			</div>
+			<div class="bg-text">
+				<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/evanhosni"><span style="font-weight:bold;">More stuff on my GitHub</span></a></p>
+			</div>
+		</div>
+	</div>
+
 	<div id="music" class="main" style="display:none">
 		<div class="music-bg">
 			<div id="music-bg-change"></div>
@@ -722,40 +103,40 @@ body {
 			<p>Noclip</p>
 				<div class="audio-wrapper">
 					<audio controls>
-						<source src="Noclip.mp3" type="audio/mpeg">
+						<source src="./assets/audio/Noclip.mp3" type="audio/mpeg">
 						Yikes! Your browser does not support the audio element. How embarrassing.
 					</audio>
 				</div>
 			<p>Talk to M,e Xenon</p>
 				<div class="audio-wrapper">
 					<audio controls>
-						<source src="Talk to M,e Xenon.mp3" type="audio/mpeg">
+						<source src="./assets/audio/Talk to M,e Xenon.mp3" type="audio/mpeg">
 						Yikes! Your browser does not support the audio element. How embarrassing.
 					</audio>
 				</div>
 			<p>Cryo <span style="font-size:18px">(I've Been Sleeping)</span></p>
 				<div class="audio-wrapper">
 					<audio controls>
-						<source src="Cryo (I've Been Sleeping).mp3" type="audio/mpeg">
+						<source src="./assets/audio/Cryo (I've Been Sleeping).mp3" type="audio/mpeg">
 						Yikes! Your browser does not support the audio element. How embarrassing.
 					</audio>
 				</div>
 			<p>Aperture</p>
 				<div class="audio-wrapper">
 					<audio controls>
-						<source src="Aperture.mp3" type="audio/mpeg">
+						<source src="./assets/audio/Aperture.mp3" type="audio/mpeg">
 						Yikes! Your browser does not support the audio element. How embarrassing.
 					</audio>
 				</div>
 			</div>
 		</div>
 		<div class="music-logo">
-			<img src="favicon (hi-res).png" onClick="somebodyTouch()">
+			<img src="./assets/images/favicon (hi-res).png" onClick="somebodyTouch()">
 		</div>
 	</div>
 
-	<div id="filmsounds" class="main" style="display:none">
-		<div class="filmsounds-bg">
+	<div id="sound_design" class="main" style="display:none">
+		<div class="sound_design-bg">
 			<div class="bg-text">
 				<p><span style="font-weight:bold">Ultimate Invasion</span></p>
 				<div class="video-wrapper">
@@ -765,15 +146,50 @@ body {
 				<p>Zorka Theme</p>
 				<div class="audio-wrapper-zorka">
 					<audio controls>
-						<source src="Zorka Theme.mp3" type="audio/mpeg">
+						<source src="./assets/audio/Zorka Theme.mp3" type="audio/mpeg">
 						Yikes! Your browser does not support the audio element. How embarrassing.
 					</audio>
 				</div>
 			</div>
+			<div class="bg-text">
+				<p><span style="font-weight:bold">Music/SFX/Dialogue demo</span></p>
+				<div class="video-wrapper">
+					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/N4lwmlBqJLo?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<p>"AngryBots" was given to me as a soundless Unity project.</p>
+				<p>I composed a vertical score and created sound effects using a mix of digital synths, home-recorded foley, and audio samples from online collections. I borrowed the help of two 'voice actors' for dialogue.</p>
+				<p>Using Wwise, I compiled all audio elements into the game engine.</p>
+			</div>
+			<div class="bg-text">
+				<p><span style="font-weight:bold">Foley/SFX demo</span></p>
+				<div class="video-wrapper">
+					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/8qayumkTKuU?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<p>With a short "The Last of Us" gameplay video as my canvas, I recorded foley in my backyard to recreate all in-game SFX.</p>
+				<p>I recorded myself crushing leaves, splashing in a puddle, and kicking a trash can.</p>
+			</div>
+			<div class="bg-text">
+				<p><span style="font-weight:bold">Vertical Score demo</span></p>
+				<div class="video-wrapper">
+					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/saLHzBTWYvM?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<p>I used this "Uncharted" clip to get more vertical score practice.</p>
+				<p>All instruments are virtual from my expansive VST collection. I created a five-layer vertical score and mixed it alongside gameplay footage to simulate the adding/subtracting of the layers in response to the fluctuating intensity of gameplay.</p>
+			</div>
+			<div class="bg-text">
+				<p><span style="font-weight:bold">UI Sounds demo</span></p>
+				<div class="video-wrapper">
+					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/iaNCHxaVzvY?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<p>I recreated UI sounds for "Cooking Fever" using a mix of virtual instruments and audio samples.</p>
+			</div>
+			<div class="bg-text">
+				<img src="./assets/images/piercenut.jpg" style="display:block;margin:auto;width:50%">
+			</div>
 		</div>
 	</div>
 
-	<div id="gamesounds" class="main" style="display:none">
+	<!-- <div id="gamesounds" class="main" style="display:none">
 		<div class="gamesounds-bg">
 			<div class="bg-text">
 				<p><span style="font-weight:bold">Music/SFX/Dialogue demo</span></p>
@@ -811,7 +227,7 @@ body {
 				<img src="piercenut.jpg" style="display:block;margin:auto;width:50%">
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<div id="luthiery" class="main" style="display:none">
 		<div class="luthiery-bg">
@@ -821,7 +237,7 @@ body {
 				<p>the construction and repair of stringed instruments.</p>
 			</div>
 			<div class="bg-text">
-				<img src="luthiery_soundhole.jpg" style="display:block;width:100%">
+				<img src="./assets/images/luthiery_soundhole.jpg" style="display:block;width:100%">
 			</div>
 			<div class="bg-text">
 				<p>I enjoy building and repairing guitars.</p>
@@ -838,14 +254,14 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-							<img src="luthiery_pics/bass/headstock.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/bass/headstock.jpg" style="display:block;width:100%">
 						</div>
 					</div>
 					<div class="slides-bass">
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-							<img src="luthiery_pics/bass/glamour1.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/bass/glamour1.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">This build was inspired by the work of Luthier Jens Ritter,
 						as well as the musical styles of Les Claypool and Justin Chancellor.</div>
@@ -854,7 +270,7 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-							<img src="luthiery_pics/bass/tonewood_closeup.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/bass/tonewood_closeup.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">It features an alder body and quilted maple top. The neck is maple and the 
 						fingerboard is African wenge. Together, this wood combination gives this instrument a tight, punchy tone -
@@ -864,7 +280,7 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-							<img src="luthiery_pics/bass/sustain_ferrule_block.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/bass/sustain_ferrule_block.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">The bass is fitted with a custom brass ferrule block to make up for any lost sustain due to the
 						instrument's light-weight build.</div>
@@ -873,7 +289,7 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-							<img src="luthiery_pics/bass/electronics.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/bass/electronics.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">The onboard electronics include Bartolini Soapbar pickups and the Bartolini HR-5.2AP/918
 						3-Band NTMB+F Preamp Module. This system gives the bass a wide tonal range, while retaining the natural characteristics of tonewoods.</div>
@@ -882,7 +298,7 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-							<img src="luthiery_pics/bass/glamour2.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/bass/glamour2.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">All of the hardware is Hipshot.</div>
 					</div>
@@ -890,7 +306,7 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-							<img src="luthiery_pics/bass/neck_carving.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/bass/neck_carving.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">I hand-carved the neck to a thin profile with a shallow radius for ease and comfort of playability.</div>
 					</div>
@@ -898,7 +314,7 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-							<img src="luthiery_pics/bass/play.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/bass/play.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">The body shape is equal parts form and function.
 						Ideal for seated playing, this bass is a great option for studio sessions.</div>
@@ -914,14 +330,14 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-							<img src="luthiery_pics/guitar/headstock.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/guitar/headstock.jpg" style="display:block;width:100%">
 						</div>
 					</div>
 					<div class="slides-guitar">
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-							<img src="luthiery_pics/guitar/glamour1.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/guitar/glamour1.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">My second acoustic build, this guitar was built with articulacy and expressivity in mind.</div>
 					</div>
@@ -929,7 +345,7 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-							<img src="luthiery_pics/guitar/top_and_back.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/guitar/top_and_back.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">I chose to use Central American bocote for back and sides, and spruce for the soundboard.
 						This tonewood combination as well as the OM body shape give this guitar a bright, sparkly tone with clear
@@ -939,7 +355,7 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-							<img src="luthiery_pics/guitar/side_bending.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/guitar/side_bending.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">The sides were bent using water, heat, and clamping pressure from a highly specialized jig.</div>
 					</div>
@@ -947,7 +363,7 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-							<img src="luthiery_pics/guitar/bracing.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/guitar/bracing.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">The soundboard is braced in the standard x-bracing style with scalloped tone bars.
 						These tone bars provide structural support and enhance higher frequencies.</div>
@@ -956,7 +372,7 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-							<img src="luthiery_pics/guitar/neck_carving.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/guitar/neck_carving.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">The neck is mahogany, hand-carved to an oval 'C' shape.</div>
 					</div>
@@ -964,7 +380,7 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-							<img src="luthiery_pics/guitar/bridge.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/guitar/bridge.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">The bridge was also hand-carved. Like the fretboard, it is ebony, which improves
 						the guitar's presence.</div>
@@ -973,7 +389,7 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-							<img src="luthiery_pics/guitar/inlay.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/guitar/inlay.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">This guitar features Mother of Pearl fretmarkers and a 12th-fret inlay of my insignia.</div>
 					</div>
@@ -981,7 +397,7 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-							<img src="luthiery_pics/guitar/spray_booth.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/guitar/spray_booth.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">I've heard talk that nitrocellulose lacquer provides significantly better tonal results
 						than other guitar finishes. I think that's a bunch of mumbo jumbo but I used it anyways, just in case.</div>
@@ -990,7 +406,7 @@ body {
 						<div class="image-wrapper">
 							<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-							<img src="luthiery_pics/guitar/binding_slot.jpg" style="display:block;width:100%">
+							<img src="./assets/luthiery_pics/guitar/binding_slot.jpg" style="display:block;width:100%">
 						</div>
 						<div class="slideshow-text">There's nothing quite like building guitars in the warm Arizona sun.</div>
 					</div>
@@ -1003,7 +419,7 @@ body {
 				<div class="video-wrapper">
 					<iframe class="bideo" width="100%" height="100%" src="https://www.youtube.com/embed/Rn5STf4ovXk?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
-				<p>This video was created for a fundraiser for local nonprofit music venue "The Vera Project". The fundraiser generated over $30,000.</p>
+				<p>This video was created for a fundraiser for local nonprofit music venue "The Vera Project".<!-- The fundraiser generated over $30,000.--></p>
 			</div>
 		</div>
 	</div>
@@ -1012,8 +428,8 @@ body {
 		<div class="fixedbottom">
 			<a target="_blank" rel="noopener noreferrer" href="mailto:evankhaledhosni@gmail.com">email</a>
 			<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/evanhosni/">linkedin</a>
+			<a target="_blank" rel="noopener noreferrer" href="https://github.com/evanhosni">github</a>
 			<a class="imdb" target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/name/nm12838452/?ref_=fn_al_nm_1">imdb</a>
-			<a class="imdb-mobile" target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/name/nm12838452/?ref_=fn_al_nm_1">imdb</a>
 			<a class="soundcloud" target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/evanhosni/popular-tracks">soundcloud</a>
 			<a class="soundcloud-mobile" target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/evanhosni">soundcloud</a>
 	<!--	<a target="_blank" rel="noopener noreferrer" href="https://evan-cat.herokuapp.com/">about me</a>-->
@@ -1119,7 +535,7 @@ body {
 		{
 		randomNum = Math.floor(Math.random() * 22);
 		}
-		document.getElementById("music-bg-change").style.backgroundImage = "url(static_gifs/static" + randomNum + ".gif)";
+		document.getElementById("music-bg-change").style.backgroundImage = "url(assets/static_gifs/static" + randomNum + ".gif)";
 		noRepeat = randomNum;
 	}
 

@@ -1,0 +1,644 @@
+body {
+	font-family: courier;
+	display: absolute;
+	margin: 0;
+	zoom: 100%;
+	overflow-x: hidden;
+}
+
+/*SIDENAV CSS STUFF*/
+	.sidenav {
+		position: fixed;
+		width: 320px;
+		top: 1%;
+		left: 1.5%;
+		overflow: hidden;
+		padding: 15px 0;
+		padding-top: 25px;
+		z-index: 2;
+		text-shadow: -1px 0px 3px #ffffff;
+	}
+
+	.fixedbottom {
+		position: fixed;
+		width: 260px;
+		bottom: 4%;
+	}
+
+	.sidenav a {
+		padding: 6px 8px 6px 16px;
+		text-decoration: none;
+		font-size: 25px;
+		font-weight: bold;
+		line-height: 1;
+		color: #000000;
+		display: block;
+		cursor: pointer;
+		user-select:none;
+	}
+
+	.sidenav a:hover {
+		color: #ffb200 !important;
+	}
+
+	.fixedbottom a {
+		font-size: 20px;
+	}
+
+	.soundcloud:link {
+		display: inherit;
+	}
+
+	.soundcloud-mobile:link {
+		display: none;
+	}
+
+/*MAIN CSS STUFF*/
+	.main {
+		line-height: 1.4;
+		font-size: 25px;
+	}
+
+	.bg-text {
+		padding: 2.5%;
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		color: white;
+		background-color: rgba(0,0,0, 0.5);
+		border: 7px solid #000000;
+		margin: auto;
+		margin-top: 5%;
+		margin-bottom: 5%;
+		max-width: 720px;
+	/*	box-shadow: 5px 5px 5px 5px #000000 */
+	}
+
+	.video-wrapper {
+		position: relative;
+		padding-bottom: 56.25%;
+	}
+
+	iframe {
+		position: absolute;
+		bottom: 2.5%;
+		left: 2.5%;
+		width: 95%;
+		height: 95%;
+	}
+
+    .iframe-relative {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        height: 30vw;
+        min-height: 600px;
+        /* transform: scale(0.5); */
+    }
+
+	.audio-wrapper {
+		position: relative;
+		z-index: 2;
+		margin: auto;
+		margin-bottom: 7.5%;
+		max-width: 720px;
+	}
+
+	.audio-wrapper-zorka {
+		position: relative;
+		z-index: 2;
+		margin: auto;
+		max-width: 720px;
+	}
+
+/*HOME PAGE CSS STUFF*/
+	.simplegame {
+		position: relative;
+		float: top;
+		width: 100%;
+	}
+
+	.homepage {
+		position: absolute;
+		transform-origin: 0 30%;
+		white-space: nowrap;
+		height: 900px;
+	}
+
+	.evanhosni {
+		position: absolute;
+		display: block;
+		margin-top: 292px;
+		color: #ffffff;
+		line-height: 1.25;
+		padding-left: 300px;
+		z-index: 2;
+	}
+
+	.instructions {
+		position: absolute;
+		margin-top: 514px;
+		color: #ffffff;
+		line-height: 1.25;
+		padding-left: 1225px;
+		z-index: 2;
+		text-align: center;
+		font-size: 20px;
+	}
+
+	.profilepic {
+		position: absolute;
+		margin-top: 300px;
+		padding-left: 900px;
+		z-index: 1;
+	}
+
+	.profilepic-mobile {
+		display: none;
+		max-width: 300px;
+		margin: auto;
+	}
+
+/*MUSIC CSS STUFF*/
+	.music-text {
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		color: #000000;
+		font-size: 22px;
+		font-weight: bold;
+		margin: auto;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+
+	.music-logo {
+		position: fixed;
+		display: block;
+		z-index: 2;
+		bottom: 3.5%;
+		right: 3.5%;
+		cursor: pointer;
+		transition: 0.6s ease;
+		user-select: none;
+	}
+
+	.music-logo:hover {
+		filter: invert(1);
+	}
+
+/*WEBDEV LINK STUFF*/
+#webdev a {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    user-select:none;
+}
+
+#webdev a:hover {
+    color: #ffb200 !important;
+}
+
+/*LUTHIERY SLIDESHOW CSS STUFF*/
+	.slides-bass {display: none;}
+
+	.slides-guitar {display: none;}
+	
+	.slideshow-container {
+		text-align: left;
+		max-width: 95%;
+		position: relative;
+		margin: auto;
+		font-family: Verdana, sans-serif;
+	}
+
+	.prev, .next {
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		padding: 16px;
+		margin-top: -40px;
+		color: #000000;
+		font-weight: bold;
+		font-size: 25px;
+		transition: 0.6s ease;
+		user-select: none;
+	}
+
+	.image-wrapper {
+		position: relative;
+		box-shadow: 0px 0px 25px 5px #000000;
+
+	}
+
+	.next {
+		right: 0;
+	}
+
+	.prev:hover, .next:hover {
+		filter: invert(1);
+		text-shadow: 0px 0px 5px #ffffff;
+	}
+
+	.slideshow-text {
+		position: relative;
+		width: 100%;
+		padding-top: 2.5%;
+		text-align: center;
+		color: white;
+		margin: auto;
+		font-family: courier;
+	}
+
+	/*.number-text {
+		color: #ffffff;
+		font-size: 12px;
+		font-weight: bold;
+		padding: 8px 12px;
+		position: absolute;
+		top: 0;
+		display:none;
+	}*/
+
+/*BACKGROUND CSS STUFF*/
+	.dotcomma-bg{
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.dotcomma-bg:before {
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0.8;
+		background-image: url('./assets/images/dotcomma_bg.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+
+    .webdev-bg{
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.webdev-bg:before {
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0.8;
+		background-image: url('./assets/images/webdev_bg.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+
+	.music-bg{
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	#music-bg-change {
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0.8;
+		background-image: url('./assets/static_gifs/static0.gif');
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+
+	.sound_design-bg{
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.sound_design-bg:before {
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0.8;
+		background-image: url('./assets/images/sound_design_bg.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+
+	.luthiery-bg{
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.luthiery-bg:before {
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0.8;
+		background-image: url('./assets/images/luthiery_bg.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+
+/*GAME @MEDIA STUFF*/
+
+	@media screen and (max-height: 495px) and (min-width: 960px) {
+		.homepage {transform-origin: top left;}
+		.game {transform-origin: top left;}
+	}
+
+	@media screen and (max-height: 630px) and (min-width: 960px) and (min-height: 450px) {
+		.homepage {transform-origin: 0 30%;}
+		.game {transform-origin: 0 30%;}
+	}
+	@media screen and (max-height: 585px) and (min-width: 960px) and (min-height: 450px) {
+		.homepage {transform-origin: 0 20%;}
+		.game {transform-origin: 0 20%;}
+	}
+	@media screen and (max-height: 540px) and (min-width: 960px) and (min-height: 450px) {
+		.homepage {transform-origin: 0 10%;}
+		.game {transform-origin: 0 10%;}
+	}
+	@media screen and (max-height: 495px) and (min-width: 960px) and (min-height: 450px) {
+		.homepage {transform-origin: top left;}
+		.game {transform-origin: top left;}
+	}
+
+	@media screen and (max-height: 684px) and (min-width: 1152px) and (min-height: 540px) {
+		.homepage {transform-origin: 0 30%;}
+		.game {transform-origin: 0 30%;}
+	}
+	@media screen and (max-height: 648px) and (min-width: 1152px) and (min-height: 540px) {
+		.homepage {transform-origin: 0 20%;}
+		.game {transform-origin: 0 20%;}
+	}
+	@media screen and (max-height: 612px) and (min-width: 1152px) and (min-height: 540px) {
+		.homepage {transform-origin: 0 10%;}
+		.game {transform-origin: 0 10%;}
+	}
+	@media screen and (max-height: 576px) and (min-width: 1152px) and (min-height: 540px) {
+		.homepage {transform-origin: top left;}
+		.game {transform-origin: top left;}
+	}
+
+	@media screen and (max-height: 765px) and (min-width: 1344px) and (min-height: 630px) {
+		.homepage {transform-origin: 0 20%;}
+		.game {transform-origin: 0 20%;}
+	}
+	@media screen and (max-height: 711px) and (min-width: 1344px) and (min-height: 630px) {
+		.homepage {transform-origin: 0 10%;}
+		.game {transform-origin: 0 10%;}
+	}
+	@media screen and (max-height: 657px) and (min-width: 1344px) and (min-height: 630px) {
+		.homepage {transform-origin: top left;}
+		.game {transform-origin: top left;}
+	}
+
+	@media screen and (max-height: 774px) and (min-width: 1536px) and (min-height: 720px) {
+		.homepage {transform-origin: 0 10%;}
+		.game {transform-origin: 0 10%;}
+	}
+	@media screen and (max-height: 738px) and (min-width: 1536px) and (min-height: 720px) {
+		.homepage {transform-origin: top left;}
+		.game {transform-origin: top left;}
+	}
+
+	@media screen and (max-height: 837px) and (min-width: 1728px) and (min-height: 810px) {
+		.homepage {transform-origin: top left;}
+		.game {transform-origin: top left;}
+	}
+
+	@media screen and (min-width: 0px) and (min-height: 0px) {
+		.homepage {transform: scale(0.5);}
+		.game {transform: scale(0.5);}
+	}
+	@media screen and (min-width: 960px) and (min-height: 450px) {
+		.homepage {transform: scale(0.5);}
+		.game {transform: scale(0.5);}
+	}
+	@media screen and (min-width: 1152px) and (min-height: 540px) {
+		.homepage {transform: scale(0.6);}
+		.game {transform: scale(0.6);}
+	}
+	@media screen and (min-width: 1344px) and (min-height: 630px) {
+		.homepage {transform: scale(0.7);}
+		.game {transform: scale(0.7);}
+	}
+	@media screen and (min-width: 1536px) and (min-height: 720px) {
+		.homepage {transform: scale(0.8);}
+		.game {transform: scale(0.8);}
+	}
+	@media screen and (min-width: 1728px) and (min-height: 810px) {
+		.homepage {transform: scale(0.9);}
+		.game {transform: scale(0.9);}
+	}
+	@media screen and (min-width: 1920px) and (min-height: 900px) {
+		.homepage {transform: scale(1);}
+		.game {transform: scale(1);}
+		.homepage {transform-origin: top left;}
+		.game {transform-origin: top left;}
+	}
+	@media screen and (min-width: 2112px) and (min-height: 990px) {
+		.homepage {transform: scale(1.1);}
+		.game {transform: scale(1.1);}
+	}
+	@media screen and (min-width: 2304px) and (min-height: 1080px) {
+		.homepage {transform: scale(1.2);}
+		.game {transform: scale(1.2);}
+	}
+	@media screen and (min-width: 2496px) and (min-height: 1170px) {
+		.homepage {transform: scale(1.3);}
+		.game {transform: scale(1.3);}
+	}
+	@media screen and (min-width: 2688px) and (min-height: 1260px) {
+		.homepage {transform: scale(1.4);}
+		.game {transform: scale(1.4);}
+	}
+	@media screen and (min-width: 2880px) and (min-height: 1350px) {
+		.homepage {transform: scale(1.5);}
+		.game {transform: scale(1.5);}
+	}
+	@media screen and (min-width: 3072px) and (min-height: 1440px) {
+		.homepage {transform: scale(1.6);}
+		.game {transform: scale(1.6);}
+	}
+	@media screen and (min-width: 3264px) and (min-height: 1530px) {
+		.homepage {transform: scale(1.7);}
+		.game {transform: scale(1.7);}
+	}
+	@media screen and (min-width: 3456px) and (min-height: 1620px) {
+		.homepage {transform: scale(1.8);}
+		.game {transform: scale(1.8);}
+	}
+	@media screen and (min-width: 3648px) and (min-height: 1710px) {
+		.homepage {transform: scale(1.9);}
+		.game {transform: scale(1.9);}
+	}
+	@media screen and (min-width: 3840px) and (min-height: 1800px) {
+		.homepage {transform: scale(2);}
+		.game {transform: scale(2);}
+	}
+
+/*OTHER @MEDIA STUFF*/
+	@media screen and (min-width: 960px) and (min-height: 451px) {
+		.bg-text {
+			margin-left: clamp(300px, 20%, 100%);
+			max-width: 60%;
+		}
+
+		.music-text {
+			margin-left: clamp(250px, 20%, 100%);
+			max-width: 60%;
+		}
+	
+		.sidenav br {display: none;}
+
+		.fixedbottom {white-space: nowrap;}
+	
+	}
+
+	@media screen and (max-width: 959px) , (max-height: 450px) {
+
+		body {
+			margin-top: 3%;
+			margin-bottom: 5%;
+		}
+
+		.sidenav {
+			position: relative;
+			width: 100%;
+			text-align: center;
+			left: 0%;
+			margin: auto;
+			line-height: 1.5;
+			font-size: 90%;
+		}
+	
+		.fixedbottom {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			line-height: 1.5;
+		}
+
+		.sidenav a {
+			display: inline-block;
+			padding: 6px 4% 6px 4%;
+			font-size: 25px;
+			line-height: 1.2;
+		}
+
+		.main {
+			font-size: 20px;
+		}
+
+		.game {display: none!important;}
+
+		.homepage {
+			white-space: normal;
+			transform: scale(1);
+			position: relative;
+			height: inherit;
+		}
+
+		.instructions {display: none!important;}
+
+        .carrot {display: none!important;}
+
+		.evanhosni {
+			text-align: center;
+			background-color: #000000;
+			padding: 2% 6% 2% 6%;
+			position: relative;
+			margin-top: 5%;
+			margin-bottom: 5%;
+			line-height: 1.4;
+			font-size: 110%;
+		}
+
+		.evanhosni br {display: none;}
+		.evanhosni span {color:#ffffff!important; font-weight:normal!important;}
+
+		.profilepic {
+			display: none;
+		}
+
+		.profilepic-mobile {
+			display: block;
+		}
+
+		.music-logo {
+			position: relative;
+			bottom: auto;
+			right: auto;
+			margin: auto;
+			text-align: center;
+			width: 50px;
+		}
+
+		.soundcloud:link {
+			display: none;
+		}
+
+		.soundcloud-mobile:link {
+			display: inherit;
+		}
+
+		.dotcomma-bg:before {
+			background-image: url('./assets/images/dotcomma_bg_mobile.jpg')
+		}
+
+        .webdev-bg:before {
+			background-image: url('./assets/images/webdev_bg_mobile.jpg')
+		}
+
+		.sound_design-bg:before {
+			background-image: url('./assets/images/sound_design_bg_mobile.jpg')
+		}
+
+		.luthiery-bg:before {
+			background-image: url('./assets/images/luthiery_bg_mobile.jpg')
+		}
+	
+	}
