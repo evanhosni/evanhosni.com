@@ -130,14 +130,14 @@ body {
 		display: block;
 		margin-top: 292px;
 		color: #ffffff;
-		line-height: 1.25;
+		line-height: 1.1;
 		padding-left: 300px;
 		z-index: 2;
 	}
 
 	.instructions {
 		position: absolute;
-		margin-top: 514px;
+		margin-top: 518px;
 		color: #ffffff;
 		line-height: 1.25;
 		padding-left: 1225px;
@@ -149,7 +149,7 @@ body {
 	.profilepic {
 		position: absolute;
 		margin-top: 300px;
-		padding-left: 900px;
+		padding-left: 920px;
 		z-index: 1;
 	}
 
