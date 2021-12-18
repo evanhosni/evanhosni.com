@@ -93,6 +93,7 @@ body {
         left: auto;
         height: 30vw;
         min-height: 600px;
+		max-width: 95%;
         /* transform: scale(0.5); */
     }
 
