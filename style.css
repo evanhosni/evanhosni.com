@@ -134,6 +134,7 @@ body {
 		line-height: 1.1;
 		padding-left: 300px;
 		z-index: 2;
+		user-select: none;
 	}
 
 	.instructions {
@@ -145,6 +146,7 @@ body {
 		z-index: 2;
 		text-align: center;
 		font-size: 20px;
+		user-select: none;
 	}
 
 	.profilepic {
@@ -152,6 +154,7 @@ body {
 		margin-top: 300px;
 		padding-left: 920px;
 		z-index: 1;
+		user-select: none;
 	}
 
 	.profilepic-mobile {
@@ -159,6 +162,34 @@ body {
 		max-width: 300px;
 		margin: auto;
 	}
+
+	#email-mobile {
+		display: none;
+	}
+
+/*DOTCOMMA LINK STUFF*/
+#dotcomma a {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    user-select:none;
+}
+
+#dotcomma a:hover {
+    color: #ffb200 !important;
+}
+
+/*WEBDEV LINK STUFF*/
+#webdev a {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    user-select:none;
+}
+
+#webdev a:hover {
+    color: #ffb200 !important;
+}
 
 /*MUSIC CSS STUFF*/
 	.music-text {
@@ -187,18 +218,6 @@ body {
 	.music-logo:hover {
 		filter: invert(1);
 	}
-
-/*WEBDEV LINK STUFF*/
-#webdev a {
-    text-decoration: none;
-    color: #ffffff;
-    cursor: pointer;
-    user-select:none;
-}
-
-#webdev a:hover {
-    color: #ffb200 !important;
-}
 
 /*LUTHIERY SLIDESHOW CSS STUFF*/
 	.slides-bass {display: none;}
@@ -281,7 +300,7 @@ body {
 		height: 100%;
 		z-index: -1;
 		opacity: 0.8;
-		background-image: url('./assets/images/dotcomma_bg.jpg');
+		background-image: url('./assets/images/dotcomma_bg.png');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: 100% 100%;
@@ -305,7 +324,7 @@ body {
 		height: 100%;
 		z-index: -1;
 		opacity: 0.8;
-		background-image: url('./assets/images/webdev_bg.jpg');
+		background-image: url('./assets/images/webdev_bg.png');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: 100% 100%;
@@ -352,7 +371,7 @@ body {
 		height: 100%;
 		z-index: -1;
 		opacity: 0.8;
-		background-image: url('./assets/images/sound_design_bg.jpg');
+		background-image: url('./assets/images/sound_design_bg.png');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: 100% 100%;
@@ -376,7 +395,7 @@ body {
 		height: 100%;
 		z-index: -1;
 		opacity: 0.8;
-		background-image: url('./assets/images/luthiery_bg.jpg');
+		background-image: url('./assets/images/luthiery_bg.png');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: 100% 100%;
@@ -596,6 +615,7 @@ body {
 			margin-bottom: 5%;
 			line-height: 1.4;
 			font-size: 110%;
+			user-select: auto;
 		}
 
 		.evanhosni br {display: none;}
@@ -606,6 +626,14 @@ body {
 		}
 
 		.profilepic-mobile {
+			display: block;
+		}
+
+		#email {
+			display: none;
+		}
+
+		#email-mobile {
 			display: block;
 		}
 
@@ -627,19 +655,19 @@ body {
 		}
 
 		.dotcomma-bg:before {
-			background-image: url('./assets/images/dotcomma_bg_mobile.jpg')
+			background-image: url('./assets/images/dotcomma_bg_mobile.png')
 		}
 
         .webdev-bg:before {
-			background-image: url('./assets/images/webdev_bg_mobile.jpg')
+			background-image: url('./assets/images/webdev_bg_mobile.png')
 		}
 
 		.sound_design-bg:before {
-			background-image: url('./assets/images/sound_design_bg_mobile.jpg')
+			background-image: url('./assets/images/sound_design_bg_mobile.png')
 		}
 
 		.luthiery-bg:before {
-			background-image: url('./assets/images/luthiery_bg_mobile.jpg')
+			background-image: url('./assets/images/luthiery_bg_mobile.png')
 		}
 	
 	}
