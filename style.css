@@ -137,6 +137,10 @@ body {
 		user-select: none;
 	}
 
+	#bottom-about {
+		padding-top: 20px;
+	}
+
 	.instructions {
 		position: absolute;
 		margin-top: 518px;
@@ -623,6 +627,10 @@ body {
 
 		.profilepic {
 			display: none;
+		}
+
+		#bottom-about {
+			padding-top: 0;
 		}
 
 		.profilepic-mobile {
